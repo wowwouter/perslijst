@@ -2,6 +2,7 @@ import csv
 import re
 import sys
 import time
+from urllib.robotparser import RobotFileParser
 from collections import deque
 from urllib.parse import urljoin, urlparse
 
@@ -14,6 +15,7 @@ CONTACT_WORDS = (
     "nieuwstip", "tip", "journalist", "editorial", "newsroom", "about"
 )
 IGNORE_PREFIXES = ("privacy@", "noreply@", "no-reply@", "webmaster@", "abuse@")
+IGNORE_WORDS = ("klantenservice", "customer", "advertentie", "adverteren", "sales", "vacature", "jobs", "hr@")
 
 HEADERS = {
     "User-Agent": "PressListResearchBot/1.0 (+https://github.com/wowwouter/perslijst)"
@@ -35,11 +37,11 @@ def same_domain(url: str, domain: str) -> bool:
     return host == domain or host.endswith("." + domain)
 
 
-def fetch(url: str):
+def fetch(url: str, domain: str):
     try:
         r = requests.get(url, headers=HEADERS, timeout=12, allow_redirects=True)
         ctype = r.headers.get("content-type", "")
-        if r.ok and "text/html" in ctype:
+        if r.ok and "text/html" in ctype and same_domain(r.url, domain):
             return r
     except requests.RequestException:
         pass
@@ -50,6 +52,8 @@ def classify(email: str, page_url: str, page_text: str) -> tuple[str, int]:
     e = email.lower()
     context = (page_url + " " + page_text[:5000]).lower()
     if e.startswith(IGNORE_PREFIXES):
+        return "overslaan", 0
+    if any(x in e for x in IGNORE_WORDS):
         return "overslaan", 0
     score = 20
     kind = "algemeen"
@@ -70,6 +74,12 @@ def classify(email: str, page_url: str, page_text: str) -> tuple[str, int]:
 
 
 def discover_pages(base_url: str, domain: str, max_pages: int = 30):
+    robots = RobotFileParser()
+    robots.set_url(f"https://{domain}/robots.txt")
+    try:
+        robots.read()
+    except Exception:
+        return []
     queue = deque([(base_url, 0)])
     seen = set()
     found = []
@@ -79,7 +89,9 @@ def discover_pages(base_url: str, domain: str, max_pages: int = 30):
         if url in seen or depth > 2:
             continue
         seen.add(url)
-        r = fetch(url)
+        if not robots.can_fetch(HEADERS["User-Agent"], url):
+            continue
+        r = fetch(url, domain)
         if not r:
             continue
 
@@ -90,7 +102,7 @@ def discover_pages(base_url: str, domain: str, max_pages: int = 30):
         for a in soup.find_all("a", href=True):
             href = urljoin(r.url, a["href"]).split("#", 1)[0]
             label = (a.get_text(" ", strip=True) + " " + a["href"]).lower()
-            if not same_domain(href, domain):
+            if urlparse(href).scheme not in ("http", "https") or not same_domain(href, domain):
                 continue
             if any(word in label for word in CONTACT_WORDS):
                 queue.append((href, depth + 1))
@@ -112,6 +124,7 @@ def scrape_domain(domain: str):
     seen_emails = set()
     for page_url, soup, text in pages:
         candidates = set(EMAIL_RE.findall(text))
+        candidates.update(EMAIL_RE.findall(str(soup)))
         for a in soup.select('a[href^="mailto:"]'):
             candidates.update(EMAIL_RE.findall(a.get("href", "")))
 
@@ -139,7 +152,7 @@ def main():
     output_path = sys.argv[2] if len(sys.argv) > 2 else "perslijst.csv"
 
     with open(input_path, encoding="utf-8") as f:
-        domains = [normalize_domain(line) for line in f if normalize_domain(line)]
+        domains = list(dict.fromkeys(normalize_domain(line) for line in f if line.strip() and not line.lstrip().startswith("#")))
 
     all_rows = []
     for i, domain in enumerate(domains, 1):
