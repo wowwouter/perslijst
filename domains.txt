@@ -1,0 +1,9 @@
+# Eén domein per regel. Regels met # zijn toelichting.
+delimburger.nl
+1limburg.nl
+ad.nl
+telegraaf.nl
+nrc.nl
+volkskrant.nl
+nos.nl
+nu.nl
