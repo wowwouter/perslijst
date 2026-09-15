@@ -1,3 +1,5 @@
-perslijst.csv
+*.csv
 __pycache__/
 .venv/
+.scrapy/
+.pytest_cache/

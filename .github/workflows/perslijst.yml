@@ -2,6 +2,15 @@ name: Perslijst maken
 
 on:
   workflow_dispatch:
+    inputs:
+      max_pages:
+        description: Maximum aantal pagina's per medium
+        type: choice
+        default: '30'
+        options:
+          - '10'
+          - '30'
+          - '60'
 
 permissions:
   contents: read
@@ -17,10 +26,18 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: pip install -r requirements.txt
-      - run: python scrape_press.py domains.txt perslijst.csv
+      - name: Controleer de scraper
+        run: python -m unittest discover -s tests -v
+      - name: Verzamel contacten en maak rapport
+        env:
+          PRESS_MAX_PAGES: ${{ inputs.max_pages }}
+        run: python scrape_press.py domains.txt perslijst.csv
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: perslijst-csv
-          path: perslijst.csv
+          path: |
+            perslijst.csv
+            perslijst_rapport.csv
           retention-days: 7
-          if-no-files-found: error
+          if-no-files-found: warn

@@ -1,21 +1,67 @@
 # Perslijst
 
-Deze scraper zoekt op de opgegeven mediasites naar publiek vermelde contactadressen. De CSV bevat `medium`, `domein`, `email`, `type`, `score` en `bron_url`. De score is een automatische inschatting; controleer de adressen en bronpagina's voordat je ze gebruikt.
+Zoek publiek vermelde contactadressen op mediasites en download de resultaten via GitHub.
 
-## Starten via GitHub
+## Starten
 
-1. Pas [`domains.txt`](domains.txt) aan: één mediadomein per regel. Begin gerust met de meegeleverde Nederlandse sites.
-2. Open het tabblad **Actions** en kies **Perslijst maken**.
-3. Klik **Run workflow** en wacht tot de run klaar is.
-4. Open de run en download onder **Artifacts** de ZIP `perslijst-csv`. Daarin staat `perslijst.csv`.
+1. Open **Actions**, kies **Perslijst maken** en klik **Run workflow**.
+2. Kies desgewenst het maximum aantal pagina's per medium. De standaard is 30.
+3. Open de afgeronde run en download onder **Artifacts** de ZIP **perslijst-csv**.
 
-De CSV wordt niet aan de openbare repository toegevoegd. GitHub bewaart het run-artifact zeven dagen. De workflow draait alleen wanneer je hem zelf start.
+De ZIP bevat:
 
-## Lokaal (optioneel)
+| Bestand | Inhoud |
+| --- | --- |
+| `perslijst.csv` | Gevonden adressen, automatische contactsoort en score, bronpagina's en vinddatum |
+| `perslijst_rapport.csv` | Per medium het aantal gelezen pagina's en adressen, fouten, blokkades en bereikte limieten |
+
+## Websites toevoegen
+
+Pas [`domains.txt`](domains.txt) aan: één mediadomein of volledige contact-URL per regel. Regels die beginnen met `#` worden overgeslagen. Een volledige URL behoudt zijn pad: handig als je de contactpagina al weet. Meerdere pagina's van hetzelfde medium worden samen verwerkt.
+
+De meegeleverde lijst is een startselectie, geen volledige inventaris van Nederlandse media.
+
+## Wat de scraper doet
+
+- Gebruikt Scrapy met maximaal vier gelijktijdige verzoeken in totaal, één download tegelijk per medium en minimaal één seconde tussen downloads. Bij tragere websites wordt de wachttijd verhoogd.
+- Leest `robots.txt`, inclusief regels voor het botprofiel. Een onbereikbare robots-pagina wordt in het rapport vermeld. Een robots-bestand met HTTP 404/410 geldt als afwezig. Een opgegeven crawl-delay wordt gevolgd tot 30 seconden; bij een langere wachttijd wordt de site overgeslagen.
+- Geeft contact-, redactie- en colofonlinks prioriteit. De maximale linkdiepte is twee. Als de homepage geen contactlinks bevat, probeert hij `/contact`, `/redactie` en `/colofon`.
+- Verwijdert trackingparameters en URL-fragmenten om dubbele verzoeken te beperken. Inhoudelijke queryparameters blijven behouden. Redirects naar een ander medium worden gestopt en gerapporteerd.
+- Leest adressen uit zichtbare tekst, ontvangers van `mailto:`-links en expliciete `email`-velden in JSON-LD. Ook expliciet geschreven vormen zoals `redactie [at] krant [dot] nl` worden herkend. Technische scripts, HTML-comments en mailonderwerpen worden niet als contactbron gebruikt.
+- Slaat herkenbare klantenservice-, advertentie-, HR- en privacyadressen over. Contactsoort en score zijn gebaseerd op het deel vóór het apenstaartje en de directe context van het adres.
+- Voegt dubbele adressen binnen hetzelfde medium samen, bewaart alle gevonden bronpagina's en kiest de vondst met de hoogste score als hoofdbron. Hetzelfde adres kan bij verschillende media voorkomen.
+- Herhaalt tijdelijke netwerk- en serverfouten maximaal twee keer. HTTP 429 wordt gerapporteerd zonder automatische herhaalpoging; verdere planning voor dat medium stopt.
+
+## Resultaten beoordelen
+
+**Contactsoort en score zijn automatische inschattingen.** `mogelijk_redactiecontact` betekent dat de tekst bij het adres op redactioneel werk wijst. `te_beoordelen` betekent dat de functie niet duidelijk is. `medium` bevat voorlopig de domeinnaam, geen geverifieerde mediatitel.
+
+De vinddatum in UTC geeft aan wanneer de run plaatsvond. Een adres wordt niet op afleverbaarheid getest. `geen_adressen_gevonden` betekent alleen dat deze crawl niets vond; het bewijst niet dat de website geen contactadres heeft. De toevoeging `_onvolledig` wijst op fouten of bereikte limieten. `niet_uitgelezen` betekent dat geen bruikbare HTML-pagina is gelezen. Bekijk dan `meldingen` en `controle_urls` in het rapport.
+
+Een interne codefout laat de workflow mislukken. Een geblokkeerde of onbereikbare website staat in het rapport en onderbreekt de overige media niet. Bij een onderbroken crawl wordt de afsluitreden vermeld.
+
+De scraper voert geen JavaScript uit. Contacten die pas na browserinteractie verschijnen, kunnen ontbreken. Sommige bekende challengepagina's krijgen het label `mogelijke_botblokkade`; dit is geen volledige detectie van alle blokkades. Playwright is een mogelijke volgende stap voor afzonderlijke sites als uit het rapport blijkt dat browserweergave nodig is.
+
+De CSV gebruikt UTF-8 met BOM voor Excel. Waarden die als spreadsheetformule kunnen worden geïnterpreteerd krijgen een apostrof als voorvoegsel.
+
+## Beschikbaarheid van downloads
+
+De CSV's worden niet als codebestand gecommit. De run-artifacts blijven zeven dagen beschikbaar. **Artifacts van een openbare repository zijn niet privé:** ingelogde GitHub-gebruikers met leestoegang kunnen ze downloaden. Zie [GitHubs uitleg over artifact-toegang](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts).
+
+## Ontwikkelen en testen
+
+Python 3.12 wordt in GitHub Actions gebruikt.
 
 ```bash
 python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
 python scrape_press.py domains.txt perslijst.csv
 ```
 
-De crawler blijft op het domein van ieder medium, volgt links naar contact- en redactiepagina's en houdt rekening met `robots.txt`. Sommige media publiceren geen e-mailadres, blokkeren bots of tonen adressen alleen via JavaScript. Zulke adressen verschijnen niet in de output. Gebruik de bron-URL om relevantie en actualiteit te beoordelen; verstuur geen ongerichte bulkmail.
+Optioneel stelt de omgevingsvariabele `PRESS_MAX_PAGES` het maximum in van 1 tot 100 pagina's per medium. De netwerkinstellingen staan in `scrape_press.py`. De Scrapy-versie is vastgezet omdat de robots-uitbreiding ook zijn interne foutafhandeling gebruikt; voer de integratietests uit bij een upgrade.
+
+De automatische testworkflow gebruikt een tijdelijke lokale website met bekende testadressen, serverfouten, robotsregels en redirects. Er worden daarbij geen echte media gecrawld. De perslijst-workflow draait alleen bij handmatig starten.
+
+## Toegepaste kennis
+
+De technische keuzes en bronnen staan in [de toelichting op de verbeteringen](docs/aanpak.md). Ze zijn gebaseerd op de relevante onderdelen van [Web scraping from 0 to hero](https://github.com/TheWebScrapingClub/webscraping-from-0-to-hero) en de actuele Scrapy-documentatie.
