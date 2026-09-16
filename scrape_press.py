@@ -17,7 +17,10 @@ from scrapy.downloadermiddlewares.robotstxt import RobotsTxtMiddleware
 from scrapy.exceptions import IgnoreRequest
 from scrapy.http import HtmlResponse
 
-from contact_utils import (\n    canonical_url, classify, contact_links, contact_matches_target, editorial_topic, extract_contacts,\n    normalize_domain, same_domain,\n)
+from contact_utils import (
+    canonical_url, classify, contact_links, contact_matches_target, editorial_topic, extract_contacts,
+    normalize_domain, same_domain,
+)
 
 BOT_NAME = "PressListResearchBot"
 SETTINGS = {

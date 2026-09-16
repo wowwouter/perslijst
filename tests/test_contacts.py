@@ -9,7 +9,10 @@ from bs4 import BeautifulSoup
 from scrapy.exceptions import IgnoreRequest
 from scrapy.http import HtmlResponse
 
-from contact_utils import (\n    canonical_url, classify, contact_links, contact_matches_target, editorial_topic,\n    extract_contacts, same_domain,\n)
+from contact_utils import (
+    canonical_url, classify, contact_links, contact_matches_target, editorial_topic,
+    extract_contacts, same_domain,
+)
 from scrape_press import PressSpider, ScopeMiddleware, read_targets, write_csv
 
 
