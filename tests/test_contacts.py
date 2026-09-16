@@ -46,7 +46,7 @@ class ContactTests(unittest.TestCase):
 
     def test_classification_uses_local_part_and_nearby_context(self):
         self.assertEqual(classify("info@nieuwsmedia.example"), ("algemeen", 35))
-        self.assertEqual(classify("jaspers@press.example"), ("te_beoordelen", 20))
+        self.assertEqual(classify("jaspers@press.example"), ("overslaan", 0))
         self.assertEqual(classify("redactie@krant.example", "Klantenservice in footer"), ("redactie", 95))
         self.assertEqual(classify("hr@krant.example")[1], 0)
         self.assertEqual(classify("klantenservice@krant.example", "redactie")[1], 0)
@@ -73,6 +73,20 @@ class ContactTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 read_targets(path)
 
+    def test_catalog_keeps_media_on_the_same_platform_separate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'media_catalog.csv'
+            path.write_text(
+                'id,medium,seed_url,scope_domain,categorie,regio,prioriteit,catalogusbron\n'
+                'stad_a,Stad A,https://platform.example/a/contact,platform.example,lokaal,A,hoog,https://source.example/\n'
+                'stad_b,Stad B,https://platform.example/b/contact,platform.example,lokaal,B,normaal,https://source.example/\n',
+                encoding='utf-8',
+            )
+            targets = read_targets(path)
+            self.assertEqual(set(targets), {'stad_a', 'stad_b'})
+            self.assertEqual(targets['stad_a']['medium'], 'Stad A')
+            self.assertEqual(targets['stad_b']['urls'], ['https://platform.example/b/contact'])
+
     def test_csv_formula_neutralization(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'out.csv'
@@ -86,7 +100,7 @@ class CrawlUnitTests(unittest.TestCase):
         self.spider = PressSpider(targets={'krant.example': ['https://krant.example/']}, output='unused.csv', max_pages=3)
 
     def response(self, url, html, depth=0):
-        request = scrapy.Request(url, meta={'media_domain': 'krant.example', 'crawl_depth': depth})
+        request = scrapy.Request(url, meta={'media_id': 'krant.example', 'scope_domain': 'krant.example', 'crawl_depth': depth})
         return HtmlResponse(url, body=html.encode(), encoding='utf-8', request=request)
 
     def test_budget_and_depth_are_bounded(self):
@@ -102,7 +116,7 @@ class CrawlUnitTests(unittest.TestCase):
         list(self.spider.parse(self.response('https://krant.example/redactie', '<p>Journalist <a href="mailto:jan@krant.example">Jan</a></p>')))
         self.assertEqual(len(self.spider.rows), 1)
         row = next(iter(self.spider.rows.values()))
-        self.assertEqual(row['score'], 65)
+        self.assertEqual(row['score'], 70)
         self.assertEqual(row['extractiemethode'], 'mailto')
         self.assertEqual(len(row['bron_urls']), 2)
 
@@ -116,7 +130,7 @@ class CrawlUnitTests(unittest.TestCase):
     def test_rate_limit_and_challenge_stop_medium(self):
         response = self.response('https://krant.example/contact', '').replace(status=429)
         list(self.spider.parse(response))
-        self.assertIn('krant.example', self.spider.stopped)
+        self.assertIn('krant.example', self.spider.stopped_domains)
         self.assertIsNone(self.spider.schedule('https://krant.example/redactie', 'krant.example', 1))
         other = PressSpider(targets={'krant.example': []}, output='unused.csv')
         list(other.parse(self.response('https://krant.example/', '<title>Just a moment...</title>')))

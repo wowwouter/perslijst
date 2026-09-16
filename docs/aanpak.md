@@ -6,7 +6,7 @@ De repository is een kennisgids met verwijzingen. Verscheidene onderwerpen in de
 
 | Onderdeel uit de gids | Toepassing in perslijst |
 | --- | --- |
-| Eerst kijken waar de gewenste gegevens staan; JSON gebruiken indien beschikbaar | Expliciete `email`-velden in JSON-LD uitlezen, naast mailto en zichtbare tekst. Bekende contact-URL's kunnen direct in de invoerlijst. |
+| Eerst kijken waar de gewenste gegevens staan; JSON gebruiken indien beschikbaar | Expliciete `email`-velden in JSON-LD uitlezen, naast mailto en zichtbare tekst. Bekende contact-URL's staan direct in de mediacatalogus. De openbare JSON achter de NLPO-kaart is gebruikt om de actuele Limburgse omroepen te controleren. |
 | Scrapy voor websites zonder benodigde browserweergave | De losse Requests-lus is vervangen door Scrapy met begrensde downloads, timeouts, retries en rapportage. |
 | Weinig gelijktijdige verzoeken, vertraging en robotsregels | Eén download per medium tegelijk, wachttijd van minimaal één seconde, AutoThrottle en controle van robotsregels. |
 | Het aantal verzoeken beperken | Contactlinks krijgen prioriteit, tracking-URL's worden samengevoegd en pagina- en dieptelimieten blijven actief. |
@@ -27,5 +27,11 @@ De gids bespreekt ook juridische onderwerpen. Deze technische implementatie doet
 - [Wappalyzer-hoofdstuk](https://github.com/TheWebScrapingClub/webscraping-from-0-to-hero/blob/fcb31693a4fc9f81be561fbbbc44afdf4aa454d1/Pages/3.Free%20Tools/Wappalyzer.md)
 - [Scrapy: downloader middleware en robotsregels](https://docs.scrapy.org/en/2.19/topics/downloader-middleware.html)
 - [Scrapy: AutoThrottle](https://docs.scrapy.org/en/2.19/topics/autothrottle.html)
+- [NLPO: De Lokale Omroep in Kaart](https://www.nlpo.nl/delokaleomroepinkaart/)
+- [NNP: leden van de branchevereniging voor lokale nieuwsmedia](https://www.nnp.nl/leden)
+- [BDU: actuele nieuwsmerken](https://bdumedia.nl/nieuwsmerk/)
+- [Rodi Media: huis-aan-huisbladen](https://www.rodimedia.nl/merken/huis-aan-huis-bladen/)
+- [RPO: regionale publieke omroepen](https://www.stichtingrpo.nl/omroepen/)
+- [NDP Nieuwsmedia: nieuwsbedrijven en merken](https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/)
 
 De classificatie van adressen, het bronbeheer, de specifieke foutstatussen en de tests zijn eigen projectkeuzes. Die onderdelen worden niet als letterlijke aanbevelingen uit de gids gepresenteerd.

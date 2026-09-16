@@ -1,4 +1,5 @@
 *.csv
+!media_catalog.csv
 __pycache__/
 .venv/
 .scrapy/

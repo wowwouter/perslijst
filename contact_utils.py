@@ -13,8 +13,9 @@ OBFUSCATED_RE = re.compile(
     r"\s*(?:\[dot\]|\(dot\))\s*([a-z]{2,63})", re.I
 )
 CONTACT_RE = re.compile(
-    r"\b(?:contact\w*|redactie\w*|colofon|nieuwstip\w*|tip|tips|pers|press|"
-    r"journalist\w*|editorial|newsroom|over[\s_-]ons|about(?:[\s_-]us)?)\b", re.I
+    r"\b(?:contact\w*|redactie\w*|colofon|nieuwstip\w*|tip[\s_-](?:de[\s_-])?redactie|pers|press|"
+    r"editorial|newsroom|over[\s_-]ons|about(?:[\s_-]us)?|ons[\s_-]team|team|medewerker\w*|"
+    r"wie[\s_-](?:zijn|is)[\s_-](?:wij|ons))\b", re.I
 )
 ASSET_SUFFIXES = (".jpg", ".jpeg", ".png", ".svg", ".gif", ".webp", ".css", ".js", ".pdf", ".zip", ".mp4")
 TRACKING_KEYS = {"fbclid", "gclid", "mc_cid", "mc_eid"}
@@ -59,7 +60,9 @@ def contact_links(soup: BeautifulSoup, base: str, domain: str):
         label = anchor.get_text(" ", strip=True) + " " + unquote(urlsplit(url).path)
         if not CONTACT_RE.search(label):
             continue
-        priority = 100 if re.search(r"\b(?:contact\w*|redactie\w*|colofon|newsroom)\b", label, re.I) else 50
+        priority = 100 if re.search(
+            r"\b(?:contact\w*|redactie\w*|colofon|newsroom|team|medewerker\w*)\b", label, re.I
+        ) else 50
         links[url] = max(links.get(url, 0), priority)
     return sorted(links.items(), key=lambda item: (-item[1], item[0]))
 
@@ -143,8 +146,14 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
     """These labels and scores are heuristics, not verified job titles."""
     local = email.split("@", 1)[0].lower()
     words = set(re.split(r"[._+-]", local))
-    excluded = {"privacy", "noreply", "webmaster", "abuse", "sales", "jobs", "hr", "dpo", "support"}
-    if words & excluded or local.startswith(("no-reply", "klantenservice", "customer", "advertentie", "adverteren", "vacature", "abonnement")):
+    excluded = {
+        "privacy", "noreply", "webmaster", "abuse", "sales", "jobs", "hr", "dpo", "support",
+        "copyright", "hergebruik", "familieberichten", "traffic", "taal", "carriere", "ombudsman",
+        "lezers", "brieven", "webcare", "service", "shop", "verkoop", "voornaam", "voorbeeld", "test",
+    }
+    if words & excluded or local.startswith((
+        "no-reply", "klantenservice", "customer", "advertentie", "adverteren", "vacature", "abonnement",
+    )):
         return "overslaan", 0
     if local.startswith(("redactie", "editorial", "newsdesk", "newsroom")) or words & {"nieuws", "news", "editor"}:
         return "redactie", 95
@@ -152,8 +161,12 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
         return "nieuwstip", 90
     if local.startswith(("persvoorlichting", "perscontact")) or words & {"pers", "press", "media"}:
         return "pers", 85
-    if re.search(r"\b(?:redactie\w*|journalist\w*|editor\w*|newsroom)\b", context, re.I):
-        return "mogelijk_redactiecontact", 65
+    if words & {"economie", "lifestyle", "wonen", "cultuur", "tech", "sport", "entertainment", "ondernemen", "zakelijk", "opinie"}:
+        return "deelredactie", 80
+    if re.search(r"\b(?:redactie\w*|journalist\w*|editor\w*|newsroom|team|medewerker\w*)\b", context, re.I):
+        return "mogelijk_redactiecontact", 70
     if words & {"info", "contact"}:
         return "algemeen", 35
-    return "te_beoordelen", 20
+    if re.search(r"\b(?:contact\w*|colofon|pers|press)\b", context, re.I):
+        return "mogelijk_contact", 50
+    return "overslaan", 0

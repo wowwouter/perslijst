@@ -6,11 +6,20 @@ on:
       max_pages:
         description: Maximum aantal pagina's per medium
         type: choice
-        default: '30'
+        default: '12'
         options:
-          - '10'
-          - '30'
-          - '60'
+          - '8'
+          - '12'
+          - '20'
+  push:
+    branches:
+      - main
+    paths:
+      - media_catalog.csv
+      - scrape_press.py
+      - contact_utils.py
+      - summarize_results.py
+      - requirements.txt
 
 permissions:
   contents: read
@@ -18,7 +27,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,8 +39,10 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Verzamel contacten en maak rapport
         env:
-          PRESS_MAX_PAGES: ${{ inputs.max_pages }}
-        run: python scrape_press.py domains.txt perslijst.csv
+          PRESS_MAX_PAGES: ${{ inputs.max_pages || '12' }}
+        run: |
+          python scrape_press.py media_catalog.csv perslijst.csv
+          python summarize_results.py perslijst.csv perslijst_rapport.csv perslijst_samenvatting.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -39,5 +50,6 @@ jobs:
           path: |
             perslijst.csv
             perslijst_rapport.csv
-          retention-days: 7
+            perslijst_samenvatting.txt
+          retention-days: 14
           if-no-files-found: warn

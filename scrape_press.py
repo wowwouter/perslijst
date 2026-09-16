@@ -1,4 +1,4 @@
-"""Run with: python scrape_press.py domains.txt perslijst.csv"""
+"""Run with: python scrape_press.py media_catalog.csv perslijst.csv"""
 
 import csv
 import os
@@ -48,13 +48,25 @@ SETTINGS = {
         "scrape_press.CautiousRobotsMiddleware": 100,
     },
 }
-FIELDS = ["medium", "domein", "email", "type", "score", "bron_url", "bron_urls", "extractiemethode", "gevonden_op"]
-REPORT_FIELDS = ["domein", "status", "paginas_gepland", "paginas_gelezen", "adressen", "meldingen", "controle_urls", "afsluiting"]
+FIELDS = [
+    "medium", "categorie", "regio", "prioriteit", "domein", "email", "email_domeincontrole", "type", "score",
+    "bron_url", "bron_urls", "extractiemethode", "catalogusbron", "gevonden_op",
+]
+REPORT_FIELDS = [
+    "medium", "categorie", "regio", "prioriteit", "domein", "status", "paginas_gepland",
+    "paginas_gelezen", "adressen", "meldingen", "controle_urls", "afsluiting",
+]
+CATALOG_FIELDS = {
+    "id", "medium", "seed_url", "scope_domain", "categorie", "regio", "prioriteit", "catalogusbron",
+}
 
 
 def read_targets(path):
+    path = Path(path)
+    if path.suffix.lower() == ".csv":
+        return read_catalog(path)
     targets = {}
-    for number, line in enumerate(Path(path).read_text(encoding="utf-8-sig").splitlines(), 1):
+    for number, line in enumerate(path.read_text(encoding="utf-8-sig").splitlines(), 1):
         line = line.strip()
         if not line or line.startswith("#"):
             continue
@@ -66,6 +78,57 @@ def read_targets(path):
             targets[domain].append(url)
     if not targets:
         raise ValueError("De domeinlijst bevat geen websites")
+    return targets
+
+
+def read_catalog(path):
+    targets = {}
+    with path.open(newline="", encoding="utf-8-sig") as handle:
+        reader = csv.DictReader(handle)
+        missing = CATALOG_FIELDS - set(reader.fieldnames or ())
+        if missing:
+            raise ValueError("Ontbrekende cataloguskolommen: " + ", ".join(sorted(missing)))
+        for number, row in enumerate(reader, 2):
+            media_id = row["id"].strip()
+            medium = row["medium"].strip()
+            raw_url = row["seed_url"].strip()
+            url = canonical_url(raw_url if "://" in raw_url else "https://" + raw_url)
+            scope = normalize_domain(row["scope_domain"].strip() or url)
+            if not media_id or not re.fullmatch(r"[a-z0-9][a-z0-9_-]*", media_id):
+                raise ValueError(f"Ongeldig id op regel {number}")
+            if not medium or not url or not scope or "." not in scope or not same_domain(url, scope):
+                raise ValueError(f"Ongeldige catalogusregel {number}")
+            metadata = {
+                "medium": medium,
+                "domain": scope,
+                "categorie": row["categorie"].strip(),
+                "regio": row["regio"].strip(),
+                "prioriteit": row["prioriteit"].strip(),
+                "catalogusbron": row["catalogusbron"].strip(),
+                "urls": [],
+            }
+            previous = targets.setdefault(media_id, metadata)
+            if {key: previous[key] for key in metadata if key != "urls"} != {
+                key: metadata[key] for key in metadata if key != "urls"
+            }:
+                raise ValueError(f"Tegenstrijdige metadata voor id {media_id} op regel {number}")
+            if url not in previous["urls"]:
+                previous["urls"].append(url)
+    if not targets:
+        raise ValueError("De mediacatalogus bevat geen websites")
+    return targets
+
+
+def normalize_targets(targets):
+    """Keep the old domain-list API usable for tests and simple local runs."""
+    if all(isinstance(value, list) for value in targets.values()):
+        return {
+            domain: {
+                "medium": domain, "domain": domain, "categorie": "", "regio": "",
+                "prioriteit": "", "catalogusbron": "", "urls": urls,
+            }
+            for domain, urls in targets.items()
+        }
     return targets
 
 
@@ -81,12 +144,13 @@ class ScopeMiddleware:
     def process_request(self, request):
         spider = self.crawler.spider
         original = request.meta.get("redirect_urls", [request.url])[0]
-        domain = request.meta.get("media_domain") or spider.owner(original)
+        domain = request.meta.get("scope_domain") or spider.owner_domain(original)
         if not domain or not same_domain(request.url, domain) or not canonical_url(request.url):
             raise IgnoreRequest("extern_domein")
-        if domain in spider.stopped:
+        if domain in spider.stopped_domains:
             raise IgnoreRequest("domein_gestopt")
-        if request.url in spider.processed and not request.meta.get("dont_obey_robotstxt"):
+        media_id = request.meta.get("media_id")
+        if media_id and (media_id, request.url) in spider.processed and not request.meta.get("dont_obey_robotstxt"):
             raise IgnoreRequest("dubbele_pagina")
         request.meta["download_slot"] = domain
 
@@ -100,13 +164,13 @@ class CautiousRobotsMiddleware(RobotsTxtMiddleware):
         self.delays = {}
 
     async def _parse_robots(self, response, netloc, request):
-        domain = request.meta.get("media_domain")
+        media_id = request.meta.get("media_id")
         if response.status in (404, 410):
             response = response.replace(body=b"")
         elif response.status != 200 or b"<html" in response.body[:500].lower():
             self.unavailable.add(netloc)
-            if domain:
-                self.crawler.spider.note(domain, f"robots_http_{response.status}", response.url)
+            if media_id:
+                self.crawler.spider.note(media_id, f"robots_http_{response.status}", response.url)
         else:
             delay = Protego.parse(response.body.decode("utf-8", errors="replace")).crawl_delay(BOT_NAME)
             if delay is not None:
@@ -139,61 +203,66 @@ class PressSpider(scrapy.Spider):
 
     def __init__(self, targets, output, max_pages=30, max_depth=2, **kwargs):
         super().__init__(**kwargs)
-        self.targets = targets
-        self.allowed_domains = list(targets)
+        self.targets = normalize_targets(targets)
+        self.allowed_domains = sorted({target["domain"] for target in self.targets.values()})
         self.output = Path(output)
         self.max_pages = int(max_pages)
         self.max_depth = int(max_depth)
-        self.scheduled = {domain: set() for domain in targets}
+        self.scheduled = {media_id: set() for media_id in self.targets}
         self.processed = set()
-        self.stopped = set()
-        self.notes = {domain: Counter() for domain in targets}
-        self.check_urls = {domain: set() for domain in targets}
+        self.stopped_domains = set()
+        self.notes = {media_id: Counter() for media_id in self.targets}
+        self.check_urls = {media_id: set() for media_id in self.targets}
         self.pages = Counter()
         self.rows = {}
         self.timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
         self.output_saved = False
 
-    def owner(self, url):
-        return next((domain for domain in self.targets if same_domain(url, domain)), None)
+    def owner_domain(self, url):
+        return next((target["domain"] for target in self.targets.values() if same_domain(url, target["domain"])), None)
 
-    def note(self, domain, reason, url):
-        self.notes[domain][reason] += 1
-        self.check_urls[domain].add(url)
+    def note(self, media_id, reason, url):
+        self.notes[media_id][reason] += 1
+        self.check_urls[media_id].add(url)
 
-    def schedule(self, url, domain, depth, priority=0):
+    def schedule(self, url, media_id, depth, priority=0):
+        domain = self.targets[media_id]["domain"]
         url = canonical_url(url)
-        if not url or not same_domain(url, domain) or url in self.scheduled[domain] or url in self.processed:
+        if not url or not same_domain(url, domain) or url in self.scheduled[media_id] or (media_id, url) in self.processed:
             return None
-        if depth > self.max_depth or domain in self.stopped:
+        if depth > self.max_depth or domain in self.stopped_domains:
             return None
-        if len(self.scheduled[domain]) >= self.max_pages:
-            self.notes[domain]["paginalimiet"] = 1
+        if len(self.scheduled[media_id]) >= self.max_pages:
+            self.notes[media_id]["paginalimiet"] = 1
             return None
-        self.scheduled[domain].add(url)
+        self.scheduled[media_id].add(url)
         return scrapy.Request(url, callback=self.parse, errback=self.failed, priority=priority,
-                              meta={"media_domain": domain, "crawl_depth": depth, "handle_httpstatus_list": list(range(400, 600))})
+                              meta={"media_id": media_id, "scope_domain": domain, "crawl_depth": depth,
+                                    "handle_httpstatus_list": list(range(400, 600))})
 
     async def start(self):
-        for domain, urls in self.targets.items():
-            for url in urls:
-                request = self.schedule(url, domain, 0, 200)
+        ordered = sorted(self.targets.items(), key=lambda item: (item[1]["prioriteit"] != "hoog", item[1]["medium"]))
+        for media_id, target in ordered:
+            for url in target["urls"]:
+                request = self.schedule(url, media_id, 0, 200)
                 if request:
                     yield request
 
     def parse(self, response):
-        domain = response.meta["media_domain"]
+        media_id = response.meta["media_id"]
+        target = self.targets[media_id]
+        domain = target["domain"]
         depth = response.meta["crawl_depth"]
-        if response.url in self.processed:
+        if (media_id, response.url) in self.processed:
             return
-        self.processed.add(response.url)
+        self.processed.add((media_id, response.url))
         if response.status != 200:
-            self.note(domain, f"http_{response.status}", response.url)
+            self.note(media_id, f"http_{response.status}", response.url)
             if response.status == 429:
-                self.stopped.add(domain)
+                self.stopped_domains.add(domain)
             return
         if not isinstance(response, HtmlResponse):
-            self.note(domain, "geen_html", response.url)
+            self.note(media_id, "geen_html", response.url)
             return
         soup = BeautifulSoup(response.text, "lxml")
         title = soup.title.get_text(" ", strip=True).lower() if soup.title else ""
@@ -201,18 +270,23 @@ class PressSpider(scrapy.Spider):
             "just a moment...", "access denied", "attention required! | cloudflare", "verify you are human"
         }
         if challenge:
-            self.note(domain, "mogelijke_botblokkade", response.url)
-            self.stopped.add(domain)
+            self.note(media_id, "mogelijke_botblokkade", response.url)
+            self.stopped_domains.add(domain)
             return
-        self.pages[domain] += 1
+        self.pages[media_id] += 1
         for contact in extract_contacts(soup):
-            kind, score = classify(contact.email, contact.context)
+            kind, score = classify(contact.email, contact.context + " " + response.url)
             if score == 0:
                 continue
-            key = (domain, contact.email)
-            row = {"medium": domain, "domein": domain, "email": contact.email, "type": kind,
+            key = (media_id, contact.email)
+            email_domain = contact.email.rsplit("@", 1)[1]
+            row = {"medium": target["medium"], "categorie": target["categorie"], "regio": target["regio"],
+                   "prioriteit": target["prioriteit"], "domein": domain, "email": contact.email,
+                   "email_domeincontrole": "zelfde_domein" if same_domain("https://" + email_domain, domain)
+                   else "ander_domein_controleren", "type": kind,
                    "score": score, "bron_url": response.url, "bron_urls": {response.url},
-                   "extractiemethode": contact.method, "gevonden_op": self.timestamp}
+                   "extractiemethode": contact.method, "catalogusbron": target["catalogusbron"],
+                   "gevonden_op": self.timestamp}
             previous = self.rows.get(key)
             if previous:
                 sources = previous["bron_urls"] | row["bron_urls"]
@@ -225,17 +299,18 @@ class PressSpider(scrapy.Spider):
         if depth == 0 and not links and urlsplit(response.url).path == "/":
             links = [(canonical_url(path, response.url), 10) for path in ("/contact", "/redactie", "/colofon")]
         if depth >= self.max_depth:
-            if any(url not in self.scheduled[domain] and url not in self.processed for url, _ in links):
-                self.notes[domain]["dieptelimiet"] = 1
+            if any(url not in self.scheduled[media_id] and (media_id, url) not in self.processed for url, _ in links):
+                self.notes[media_id]["dieptelimiet"] = 1
             return
         for url, priority in links:
-            request = self.schedule(url, domain, depth + 1, priority)
+            request = self.schedule(url, media_id, depth + 1, priority)
             if request:
                 yield request
 
     def failed(self, failure):
         request = failure.request
-        domain = request.meta["media_domain"]
+        media_id = request.meta["media_id"]
+        domain = self.targets[media_id]["domain"]
         message = failure.getErrorMessage()
         if message in ("dubbele_pagina", "domein_gestopt"):
             return
@@ -245,31 +320,33 @@ class PressSpider(scrapy.Spider):
             reason = message
         else:
             reason = "netwerk_" + failure.type.__name__
-        self.note(domain, reason, request.url)
+        self.note(media_id, reason, request.url)
         if not failure.check(IgnoreRequest) and request.meta["crawl_depth"] == 0 and urlsplit(request.url).netloc == domain:
-            request = self.schedule(f"https://www.{domain}{urlsplit(request.url).path}", domain, 0, 150)
+            request = self.schedule(f"https://www.{domain}{urlsplit(request.url).path}", media_id, 0, 150)
             if request:
                 yield request
 
     def closed(self, reason):
         rows = sorted(self.rows.values(), key=lambda row: (-row["score"], row["domein"], row["email"]))
         write_csv(self.output, FIELDS, ({**row, "bron_urls": " | ".join(sorted(row["bron_urls"]))} for row in rows))
-        counts = Counter(row["domein"] for row in rows)
+        counts = Counter(media_id for media_id, _ in self.rows)
         reports = []
-        for domain in self.targets:
+        for media_id, target in self.targets.items():
             if reason != "finished":
-                self.notes[domain]["crawl_onderbroken"] += 1
+                self.notes[media_id]["crawl_onderbroken"] += 1
             if self.crawler.stats.get_value("spider_exceptions/count", 0):
-                self.notes[domain]["interne_fout_in_run"] = 1
-            status = "gevonden" if counts[domain] else "geen_adressen_gevonden"
-            if not self.pages[domain]:
+                self.notes[media_id]["interne_fout_in_run"] = 1
+            status = "gevonden" if counts[media_id] else "geen_adressen_gevonden"
+            if not self.pages[media_id]:
                 status = "niet_uitgelezen"
-            elif self.notes[domain]:
+            elif self.notes[media_id]:
                 status += "_onvolledig"
-            reports.append({"domein": domain, "status": status, "paginas_gepland": len(self.scheduled[domain]),
-                            "paginas_gelezen": self.pages[domain], "adressen": counts[domain],
-                            "meldingen": " | ".join(f"{key}: {value}" for key, value in sorted(self.notes[domain].items())),
-                            "controle_urls": " | ".join(sorted(self.check_urls[domain])), "afsluiting": reason})
+            reports.append({"medium": target["medium"], "categorie": target["categorie"], "regio": target["regio"],
+                            "prioriteit": target["prioriteit"], "domein": target["domain"], "status": status,
+                            "paginas_gepland": len(self.scheduled[media_id]), "paginas_gelezen": self.pages[media_id],
+                            "adressen": counts[media_id],
+                            "meldingen": " | ".join(f"{key}: {value}" for key, value in sorted(self.notes[media_id].items())),
+                            "controle_urls": " | ".join(sorted(self.check_urls[media_id])), "afsluiting": reason})
         write_csv(self.output.with_name(self.output.stem + "_rapport.csv"), REPORT_FIELDS, reports)
         self.output_saved = True
         print(f"Klaar: {len(rows)} adressen, {sum(self.pages.values())} pagina's gelezen. Zie ook het rapport.", flush=True)
@@ -287,7 +364,7 @@ def write_csv(path, fields, rows):
 
 
 def main():
-    input_path = sys.argv[1] if len(sys.argv) > 1 else "domains.txt"
+    input_path = sys.argv[1] if len(sys.argv) > 1 else "media_catalog.csv"
     output_path = sys.argv[2] if len(sys.argv) > 2 else "perslijst.csv"
     try:
         targets = read_targets(input_path)
