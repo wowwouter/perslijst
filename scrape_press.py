@@ -304,7 +304,7 @@ class PressSpider(scrapy.Spider):
                 ),
                 "prioriteit": target["prioriteit"], "domein": domain, "email": contact.email,
                 "email_domeincontrole": "zelfde_domein" if same_domain("https://" + email_domain, domain)
-                else "ander_domein_controleren", "type": kind,
+                else "ander_domein_officieel_gepubliceerd", "type": kind,
                 "score": score, "bron_url": response.url, "bron_urls": {response.url},
                 "extractiemethode": contact.method, "catalogusbron": target["catalogusbron"],
                 "gevonden_op": self.timestamp,

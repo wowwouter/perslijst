@@ -14,6 +14,14 @@ De repository is een kennisgids met verwijzingen. Verscheidene onderwerpen in de
 | Website-technologie en blokkades onderzoeken | HTTP-fouten en enkele herkenbare challengepagina's worden in het rapport vermeld. Deze herkenning is een projectkeuze en geen volledige Wappalyzer-implementatie. |
 | Een browser inzetten wanneer rendering nodig is | Voorlopig HTML/JSON-LD. Het rapport biedt aanknopingspunten om later per site te bepalen of een Playwright-stap nodig is. |
 
+## Wat verificatie hier betekent
+
+Een contact krijgt afzonderlijke signalen voor de openbare bron en het maildomein. De broncontrole is sterk bewijs dat het medium het adres publiceerde. De DNS-controle toont alleen of het domein een technische mailroute heeft; hij bewijst niet dat de afzonderlijke mailbox bestaat.
+
+Er wordt geen SMTP-`VRFY`- of ontvangerstest uitgevoerd. RFC 5321 staat toe dat servers verificatie uitschakelen of een niet-definitief antwoord geven, onder meer om misbruik en het verzamelen van adressen te beperken. Een directe e-mailping zou daardoor schijnzekerheid toevoegen en kan ongewenst verkeer veroorzaken.
+
+Een externe zoek-API, zoals SerpApi, kan later als aanvullende bronzoeker worden aangesloten voor rijen zonder officiële bronpagina. Zo'n zoekresultaat vervangt de officiële broncontrole niet. LinkedIn wordt niet als mailboxvalidator gebruikt: profielgegevens en API-toegang zijn beperkt en zeggen niets over de technische geldigheid van een e-mailadres.
+
 ## Grenzen aan de overname
 
 De aanbevelingen voor browserfingerprints, proxyrotatie en het passeren van botbescherming zijn niet nodig voor de hier gebouwde basis. Er worden geen betaalde diensten ingeschakeld. Een browser kan bovendien alleen worden beoordeeld aan de hand van een concrete site en een test; de gids is geen bewijs dat een beschreven techniek nu bij een bepaald medium werkt.
@@ -27,6 +35,9 @@ De gids bespreekt ook juridische onderwerpen. Deze technische implementatie doet
 - [Wappalyzer-hoofdstuk](https://github.com/TheWebScrapingClub/webscraping-from-0-to-hero/blob/fcb31693a4fc9f81be561fbbbc44afdf4aa454d1/Pages/3.Free%20Tools/Wappalyzer.md)
 - [Scrapy: downloader middleware en robotsregels](https://docs.scrapy.org/en/2.19/topics/downloader-middleware.html)
 - [Scrapy: AutoThrottle](https://docs.scrapy.org/en/2.19/topics/autothrottle.html)
+- [RFC 5321: SMTP verificatie](https://www.rfc-editor.org/rfc/rfc5321.html#section-3.5.3)
+- [SerpApi Search API](https://serpapi.com/search-api)
+- [LinkedIn Profile API](https://learn.microsoft.com/en-us/linkedin/shared/integrations/people/profile-api)
 - [NLPO: De Lokale Omroep in Kaart](https://www.nlpo.nl/delokaleomroepinkaart/)
 - [NNP: leden van de branchevereniging voor lokale nieuwsmedia](https://www.nnp.nl/leden)
 - [BDU: actuele nieuwsmerken](https://bdumedia.nl/nieuwsmerk/)

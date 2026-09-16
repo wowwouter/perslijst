@@ -19,6 +19,7 @@ on:
       - scrape_press.py
       - contact_utils.py
       - summarize_results.py
+      - verify_contacts.py
       - requirements.txt
 
 permissions:
@@ -42,6 +43,7 @@ jobs:
           PRESS_MAX_PAGES: ${{ inputs.max_pages || '12' }}
         run: |
           python scrape_press.py media_catalog.csv perslijst.csv
+          python verify_contacts.py perslijst.csv
           python summarize_results.py perslijst.csv perslijst_rapport.csv perslijst_samenvatting.txt
       - uses: actions/upload-artifact@v4
         if: always()

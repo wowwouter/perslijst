@@ -17,17 +17,25 @@ def main():
     output_path = sys.argv[3] if len(sys.argv) > 3 else "perslijst_samenvatting.txt"
     contacts = read(contacts_path)
     reports = read(report_path)
+    unique_emails = {row["email"].lower() for row in contacts if row.get("email")}
     media_with_contacts = {row["medium"] for row in contacts}
     limburg = [row for row in contacts if row.get("provincie") == "Limburg"]
     press_relevant = [row for row in contacts if int(row["score"]) >= 65]
-    cross_domain = [row for row in contacts if row.get("email_domeincontrole") == "ander_domein_controleren"]
+    source_confirmed = [row for row in contacts if row.get("bronverificatie") == "bevestigd_op_mediawebsite"]
+    mail_route = [row for row in contacts if row.get("maildomein_status") in {"mx_aanwezig", "geen_mx_wel_adresrecord"}]
+    mail_unknown = [row for row in contacts if row.get("maildomein_status") == "dns_controle_mislukt"]
+    cross_domain = [row for row in contacts if row.get("email_domeincontrole", "").startswith("ander_domein")]
     lines = [
-        f"Publieke contactadressen: {len(contacts)}",
+        f"Publieke medium-contactkoppelingen: {len(contacts)}",
+        f"Unieke e-mailadressen: {len(unique_emails)}",
         f"Persrelevante adressen met score 65 of hoger: {len(press_relevant)}",
         f"Media in catalogus: {len(reports)}",
         f"Media met minstens één adres: {len(media_with_contacts)}",
         f"Limburg: {len(limburg)} adressen",
-        f"Adressen op een ander domein, handmatig controleren: {len(cross_domain)}",
+        f"Op de mediawebsite gepubliceerd: {len(source_confirmed)}",
+        f"E-maildomein met mailroute: {len(mail_route)}",
+        f"DNS-controle tijdelijk onbekend: {len(mail_unknown)}",
+        f"Ander e-maildomein, maar op de mediawebsite gepubliceerd: {len(cross_domain)}",
         "",
         "Contactsoorten:",
     ]
