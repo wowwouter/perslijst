@@ -27,7 +27,7 @@ wijlimburg,WijLimburg,WijLimburg,https://www.wijlimburg.nl/,wijlimburg.nl,region
 chapeau,Chapeau Magazine,Chapeau Magazine,https://www.chapeaumagazine.com/,chapeaumagazine.com,regionaal magazine,Limburg,Provinciebreed,,"lifestyle, gastronomie en ondernemen",,hoog,https://www.chapeaumagazine.com/
 nnp_achterhoek_nieuws,Achterhoek Nieuws,Achterhoek Nieuws,http://www.achterhoeknieuws.nl,achterhoeknieuws.nl,lokale krant of uitgever,Gelderland,Achterhoek,Lichtenvoorde,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_actief_media,Actief Media,Actief Media,http://www.actiefmedia.nl,actiefmedia.nl,lokale krant of uitgever,Friesland,Noordoost-Friesland,Burgum,algemeen nieuws,,normaal,https://www.nnp.nl/leden
-nnp_almere_deze_week,Almere DEZE WEEK,Almere DEZE WEEK,http://www.almeredezeweek.nl,almeredezeweek.nl,lokale krant of uitgever,Flevoland,Flevoland,Almere,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_almere_deze_week,Almere DEZE WEEK,Almere DEZE WEEK,http://www.almeredezeweek.nl,almeredezeweek.nl,lokale krant of uitgever,Flevoland,Almere en omgeving,Almere,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_arena_mediacentrum,Arena Mediacentrum,Arena Mediacentrum,http://www.arenamediacentrum.nl,arenamediacentrum.nl,lokale krant of uitgever,Noord-Brabant,Noordoost-Brabant,Schaijk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_bar_lokale_media,BAR Lokale Media,BAR Lokale Media,http://www.barlokalemedia.nl,barlokalemedia.nl,lokale krant of uitgever,Zuid-Holland,Rotterdam-Rijnmond,Barendrecht,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_bdu_media,BDU Media,BDU Media,http://www.bdumedia.nl,bdumedia.nl,lokale krant of uitgever,Gelderland,Gelderse Vallei,Barneveld,algemeen nieuws,,normaal,https://www.nnp.nl/leden
@@ -68,7 +68,7 @@ nnp_telstar_mediacentrum,Telstar Mediacentrum,Telstar Mediacentrum,http://www.te
 nnp_de_toren,De Toren,De Toren,http://www.detoren.net/,detoren.net,lokale krant of uitgever,Overijssel,Vechtdal,Hardenberg,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_uitgeverij_de_uitkomst,UItgeverij De Uitkomst,UItgeverij De Uitkomst,http://www.de-uitkomst.nl,de-uitkomst.nl,lokale krant of uitgever,Noord-Holland,Land van Leeghwater,De Rijp,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_uitkijkpost_media,Uitkijkpost Media,Uitkijkpost Media,http://www.uitkijkpost.nl/,uitkijkpost.nl,lokale krant of uitgever,Noord-Holland,Noord-Kennemerland,Heiloo,algemeen nieuws,,normaal,https://www.nnp.nl/leden
-nnp_het_urkerland,Het Urkerland,Het Urkerland,http://www.heturkerland.nl,heturkerland.nl,lokale krant of uitgever,Flevoland,Flevoland,Urk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_het_urkerland,Het Urkerland,Het Urkerland,http://www.heturkerland.nl,heturkerland.nl,lokale krant of uitgever,Flevoland,Urk en omgeving,Urk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_uitgeverij_verhagen,Uitgeverij Verhagen,Uitgeverij Verhagen,http://www.uitgeverijverhagen.nl,uitgeverijverhagen.nl,lokale krant of uitgever,Zuid-Holland,Duin- en Bollenstreek,Katwijk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_vermeulen_steenbergen,Vermeulen Steenbergen,Vermeulen Steenbergen,http://www.vermeulensteenbergen.nl/,vermeulensteenbergen.nl,lokale krant of uitgever,Noord-Brabant,West-Brabant,Steenbergen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
 nnp_voorster_nieuws,Voorster Nieuws,Voorster Nieuws,http://www.voorsternieuws.nl,voorsternieuws.nl,lokale krant of uitgever,Gelderland,Stedendriehoek,Twello,algemeen nieuws,,normaal,https://www.nnp.nl/leden
@@ -101,7 +101,7 @@ bdu_stad_wageningen,Stad Wageningen,Stad Wageningen,https://stadwageningen.nl,st
 bdu_soester_courant,Soester Courant,Soester Courant,https://www.soestercourant.nl,soestercourant.nl,lokale krant,Utrecht,Eemland,Soest,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/soester-courant
 bdu_scherpenzeelse_krant,Scherpenzeelse Krant,Scherpenzeelse Krant,https://www.scherpenzeelsekrant.nl,scherpenzeelsekrant.nl,lokale krant,Gelderland,Gelderse Vallei,Scherpenzeel,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/scherpenzeelse-krant
 bdu_stad_nijkerk_nl,De Stad Nijkerk,De Stad Nijkerk,https://www.destadnijkerk.nl,destadnijkerk.nl,lokale krant,Gelderland,Gelderse Vallei,Nijkerk,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/stad-nijkerk-nl
-bdu_vierklank,Vierklank,Vierklank,https://www.vierklank.nl,vierklank.nl,lokale krant,Utrecht,De Bilt,De Bilt,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/vierklank
+bdu_vierklank,Vierklank,Vierklank,https://www.vierklank.nl,vierklank.nl,lokale krant,Utrecht,De Bilt en omgeving,De Bilt,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/vierklank
 bdu_wijks_nieuws,Wijks Nieuws,Wijks Nieuws,https://www.wijksnieuws.nl,wijksnieuws.nl,lokale krant,Utrecht,Kromme Rijnstreek,Wijk bij Duurstede,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/wijks-nieuws
 rodi_alkmaar,Rodi Alkmaar,Rodi Alkmaar,https://www.rodi.nl/alkmaar/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Noord-Kennemerland,Alkmaar,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
 rodi_alphen_aan_den_rijn,Rodi Alphen aan den Rijn,Rodi Alphen aan den Rijn,https://www.rodi.nl/alphenaandenrijn/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Groene Hart,Alphen aan den Rijn,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
@@ -161,7 +161,7 @@ ndp_het_financieele_dagblad,Het Financieele Dagblad,Het Financieele Dagblad,http
 ndp_bnr_nieuwsradio,BNR Nieuwsradio,BNR Nieuwsradio,https://www.bnr.nl/,bnr.nl,landelijk of regionaal nieuws,,Landelijk,,economie en ondernemen,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
 ndp_de_groene_amsterdammer,De Groene Amsterdammer,De Groene Amsterdammer,https://www.groene.nl/,groene.nl,landelijk of regionaal nieuws,,Landelijk,,opinie en achtergrond,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
 ndp_ad,AD,AD,https://www.ad.nl/,ad.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_het_parool,Het Parool,Het Parool,https://www.parool.nl/,parool.nl,landelijk of regionaal nieuws,Noord-Holland,Amsterdam,Amsterdam,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_het_parool,Het Parool,Het Parool,https://www.parool.nl/,parool.nl,landelijk of regionaal nieuws,Noord-Holland,Groot-Amsterdam,Amsterdam,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
 ndp_trouw,Trouw,Trouw,https://www.trouw.nl/,trouw.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
 ndp_de_volkskrant,de Volkskrant,de Volkskrant,https://www.volkskrant.nl/,volkskrant.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
 ndp_bn_destem,BN DeStem,BN DeStem,https://www.bndestem.nl/,bndestem.nl,landelijk of regionaal nieuws,Noord-Brabant,West-Brabant en Zeeland,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
