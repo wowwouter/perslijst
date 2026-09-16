@@ -17,7 +17,7 @@ from scrapy.downloadermiddlewares.robotstxt import RobotsTxtMiddleware
 from scrapy.exceptions import IgnoreRequest
 from scrapy.http import HtmlResponse
 
-from contact_utils import canonical_url, classify, contact_links, extract_contacts, normalize_domain, same_domain
+from contact_utils import (\n    canonical_url, classify, contact_links, contact_matches_target, editorial_topic, extract_contacts,\n    normalize_domain, same_domain,\n)
 
 BOT_NAME = "PressListResearchBot"
 SETTINGS = {
@@ -49,15 +49,18 @@ SETTINGS = {
     },
 }
 FIELDS = [
-    "medium", "categorie", "regio", "prioriteit", "domein", "email", "email_domeincontrole", "type", "score",
+    "medium", "publicaties", "categorie", "provincie", "regio", "stad", "mediumthema",
+    "redactie_onderwerp", "prioriteit", "domein", "email", "email_domeincontrole", "type", "score",
     "bron_url", "bron_urls", "extractiemethode", "catalogusbron", "gevonden_op",
 ]
 REPORT_FIELDS = [
-    "medium", "categorie", "regio", "prioriteit", "domein", "status", "paginas_gepland",
-    "paginas_gelezen", "adressen", "meldingen", "controle_urls", "afsluiting",
+    "medium", "publicaties", "categorie", "provincie", "regio", "stad", "mediumthema",
+    "prioriteit", "domein", "status", "paginas_gepland", "paginas_gelezen", "adressen",
+    "meldingen", "controle_urls", "afsluiting",
 ]
 CATALOG_FIELDS = {
-    "id", "medium", "seed_url", "scope_domain", "categorie", "regio", "prioriteit", "catalogusbron",
+    "id", "medium", "publicaties", "seed_url", "scope_domain", "categorie", "provincie", "regio",
+    "stad", "mediumthema", "contact_trefwoorden", "prioriteit", "catalogusbron",
 }
 
 
@@ -100,9 +103,14 @@ def read_catalog(path):
                 raise ValueError(f"Ongeldige catalogusregel {number}")
             metadata = {
                 "medium": medium,
+                "publicaties": row["publicaties"].strip() or medium,
                 "domain": scope,
                 "categorie": row["categorie"].strip(),
+                "provincie": row["provincie"].strip(),
                 "regio": row["regio"].strip(),
+                "stad": row["stad"].strip(),
+                "mediumthema": row["mediumthema"].strip(),
+                "contact_trefwoorden": row["contact_trefwoorden"].strip(),
                 "prioriteit": row["prioriteit"].strip(),
                 "catalogusbron": row["catalogusbron"].strip(),
                 "urls": [],
@@ -124,8 +132,9 @@ def normalize_targets(targets):
     if all(isinstance(value, list) for value in targets.values()):
         return {
             domain: {
-                "medium": domain, "domain": domain, "categorie": "", "regio": "",
-                "prioriteit": "", "catalogusbron": "", "urls": urls,
+                "medium": domain, "publicaties": domain, "domain": domain, "categorie": "",
+                "provincie": "", "regio": "", "stad": "", "mediumthema": "",
+                "contact_trefwoorden": "", "prioriteit": "", "catalogusbron": "", "urls": urls,
             }
             for domain, urls in targets.items()
         }
@@ -275,18 +284,28 @@ class PressSpider(scrapy.Spider):
             return
         self.pages[media_id] += 1
         for contact in extract_contacts(soup):
-            kind, score = classify(contact.email, contact.context + " " + response.url)
-            if score == 0:
+            context = contact.context + " " + response.url
+            kind, score = classify(contact.email, context)
+            if score == 0 or not contact_matches_target(
+                contact.email, context, kind, target["contact_trefwoorden"]
+            ):
                 continue
             key = (media_id, contact.email)
             email_domain = contact.email.rsplit("@", 1)[1]
-            row = {"medium": target["medium"], "categorie": target["categorie"], "regio": target["regio"],
-                   "prioriteit": target["prioriteit"], "domein": domain, "email": contact.email,
-                   "email_domeincontrole": "zelfde_domein" if same_domain("https://" + email_domain, domain)
-                   else "ander_domein_controleren", "type": kind,
-                   "score": score, "bron_url": response.url, "bron_urls": {response.url},
-                   "extractiemethode": contact.method, "catalogusbron": target["catalogusbron"],
-                   "gevonden_op": self.timestamp}
+            row = {
+                "medium": target["medium"], "publicaties": target["publicaties"],
+                "categorie": target["categorie"], "provincie": target["provincie"],
+                "regio": target["regio"], "stad": target["stad"], "mediumthema": target["mediumthema"],
+                "redactie_onderwerp": editorial_topic(
+                    contact.email, context, target["mediumthema"], kind
+                ),
+                "prioriteit": target["prioriteit"], "domein": domain, "email": contact.email,
+                "email_domeincontrole": "zelfde_domein" if same_domain("https://" + email_domain, domain)
+                else "ander_domein_controleren", "type": kind,
+                "score": score, "bron_url": response.url, "bron_urls": {response.url},
+                "extractiemethode": contact.method, "catalogusbron": target["catalogusbron"],
+                "gevonden_op": self.timestamp,
+            }
             previous = self.rows.get(key)
             if previous:
                 sources = previous["bron_urls"] | row["bron_urls"]
@@ -341,8 +360,11 @@ class PressSpider(scrapy.Spider):
                 status = "niet_uitgelezen"
             elif self.notes[media_id]:
                 status += "_onvolledig"
-            reports.append({"medium": target["medium"], "categorie": target["categorie"], "regio": target["regio"],
-                            "prioriteit": target["prioriteit"], "domein": target["domain"], "status": status,
+            reports.append({"medium": target["medium"], "publicaties": target["publicaties"],
+                            "categorie": target["categorie"], "provincie": target["provincie"],
+                            "regio": target["regio"], "stad": target["stad"],
+                            "mediumthema": target["mediumthema"], "prioriteit": target["prioriteit"],
+                            "domein": target["domain"], "status": status,
                             "paginas_gepland": len(self.scheduled[media_id]), "paginas_gelezen": self.pages[media_id],
                             "adressen": counts[media_id],
                             "meldingen": " | ".join(f"{key}: {value}" for key, value in sorted(self.notes[media_id].items())),

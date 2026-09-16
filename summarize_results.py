@@ -18,7 +18,7 @@ def main():
     contacts = read(contacts_path)
     reports = read(report_path)
     media_with_contacts = {row["medium"] for row in contacts}
-    limburg = [row for row in contacts if "limburg" in row["regio"].lower() or row["prioriteit"] == "hoog"]
+    limburg = [row for row in contacts if row.get("provincie") == "Limburg"]
     press_relevant = [row for row in contacts if int(row["score"]) >= 65]
     cross_domain = [row for row in contacts if row.get("email_domeincontrole") == "ander_domein_controleren"]
     lines = [
@@ -26,7 +26,7 @@ def main():
         f"Persrelevante adressen met score 65 of hoger: {len(press_relevant)}",
         f"Media in catalogus: {len(reports)}",
         f"Media met minstens één adres: {len(media_with_contacts)}",
-        f"Limburg en hoge prioriteit: {len(limburg)} adressen",
+        f"Limburg: {len(limburg)} adressen",
         f"Adressen op een ander domein, handmatig controleren: {len(cross_domain)}",
         "",
         "Contactsoorten:",
@@ -34,6 +34,11 @@ def main():
     lines.extend(f"- {name}: {count}" for name, count in Counter(row["type"] for row in contacts).most_common())
     lines.extend(["", "Categorieën:"])
     lines.extend(f"- {name or 'niet ingevuld'}: {count}" for name, count in Counter(row["categorie"] for row in contacts).most_common())
+    lines.extend(["", "Redactieonderwerpen:"])
+    lines.extend(
+        f"- {name or 'niet ingevuld'}: {count}"
+        for name, count in Counter(row.get("redactie_onderwerp", "") for row in contacts).most_common()
+    )
     lines.extend(["", "Status per medium:"])
     lines.extend(f"- {name}: {count}" for name, count in Counter(row["status"] for row in reports).most_common())
     Path(output_path).write_text("\n".join(lines) + "\n", encoding="utf-8")

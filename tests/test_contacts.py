@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from scrapy.exceptions import IgnoreRequest
 from scrapy.http import HtmlResponse
 
-from contact_utils import canonical_url, classify, contact_links, extract_contacts, same_domain
+from contact_utils import (\n    canonical_url, classify, contact_links, contact_matches_target, editorial_topic,\n    extract_contacts, same_domain,\n)
 from scrape_press import PressSpider, ScopeMiddleware, read_targets, write_csv
 
 
@@ -51,6 +51,20 @@ class ContactTests(unittest.TestCase):
         self.assertEqual(classify("hr@krant.example")[1], 0)
         self.assertEqual(classify("klantenservice@krant.example", "redactie")[1], 0)
 
+    def test_editorial_topic_and_shared_publisher_matching(self):
+        self.assertEqual(editorial_topic("sport@krant.example", "", "algemeen nieuws", "deelredactie"), "sport")
+        self.assertEqual(editorial_topic("redactie@haak.example", "", "haken en amigurumi", "redactie"), "haken en amigurumi")
+        self.assertTrue(contact_matches_target(
+            "marion@publisher.example", "Chief editor voor alle creatieve merken", "mogelijk_redactiecontact", "hobbyhandig"
+        ))
+        self.assertTrue(contact_matches_target(
+            "monique@publisher.example", "Brand coordinator Aan de Haak", "mogelijk_redactiecontact", "aan de haak"
+        ))
+        self.assertFalse(contact_matches_target(
+            "monique@publisher.example", "Brand coordinator Aan de Haak", "mogelijk_redactiecontact", "stitch & quilt"
+        ))
+        self.assertEqual(classify("danielle@publisher.example", "Finance & Office medewerker")[1], 0)
+
     def test_tracking_removed_and_meaningful_queries_preserved(self):
         self.assertEqual(canonical_url('/contact?utm_source=mail&desk=2#x', 'https://KRANT.example/'), 'https://krant.example/contact?desk=2')
         self.assertNotEqual(canonical_url('https://krant.example/contact?desk=1'), canonical_url('https://krant.example/contact?desk=2'))
@@ -77,9 +91,9 @@ class ContactTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'media_catalog.csv'
             path.write_text(
-                'id,medium,seed_url,scope_domain,categorie,regio,prioriteit,catalogusbron\n'
-                'stad_a,Stad A,https://platform.example/a/contact,platform.example,lokaal,A,hoog,https://source.example/\n'
-                'stad_b,Stad B,https://platform.example/b/contact,platform.example,lokaal,B,normaal,https://source.example/\n',
+                'id,medium,publicaties,seed_url,scope_domain,categorie,provincie,regio,stad,mediumthema,contact_trefwoorden,prioriteit,catalogusbron\n'
+                'stad_a,Stad A,Stad A,https://platform.example/a/contact,platform.example,lokaal,Limburg,Parkstad,Heerlen,algemeen nieuws,stad a,hoog,https://source.example/\n'
+                'stad_b,Stad B,Stad B,https://platform.example/b/contact,platform.example,lokaal,Utrecht,Eemland,Amersfoort,sport,stad b,normaal,https://source.example/\n',
                 encoding='utf-8',
             )
             targets = read_targets(path)

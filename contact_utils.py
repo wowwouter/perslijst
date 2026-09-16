@@ -150,10 +150,24 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
         "privacy", "noreply", "webmaster", "abuse", "sales", "jobs", "hr", "dpo", "support",
         "copyright", "hergebruik", "familieberichten", "traffic", "taal", "carriere", "ombudsman",
         "lezers", "brieven", "webcare", "service", "shop", "verkoop", "voornaam", "voorbeeld", "test",
+        "finance", "administratie", "abonnementen",
     }
     if words & excluded or local.startswith((
         "no-reply", "klantenservice", "customer", "advertentie", "adverteren", "vacature", "abonnement",
     )):
+        return "overslaan", 0
+    editorial_role = re.search(
+        r"\b(?:hoofdredacteur|eindredacteur|redacteur|redactie\w*|journalist\w*|editor\w*|"
+        r"newsroom|chief content|chief editor|content editor|brand[ -]co(?:o|ö)rdinator)\b",
+        context, re.I,
+    )
+    non_editorial_role = re.search(
+        r"\b(?:finance|sales|account manager|customer relations|office manager|webshop manager|"
+        r"graphic designer|vormgeving|administratie|abonnementen|marketing co(?:o|ö)rdinator|"
+        r"chief executive officer|chief operations officer|\bceo\b|\bcoo\b)\b",
+        context, re.I,
+    )
+    if non_editorial_role and not editorial_role:
         return "overslaan", 0
     if local.startswith(("redactie", "editorial", "newsdesk", "newsroom")) or words & {"nieuws", "news", "editor"}:
         return "redactie", 95
@@ -161,12 +175,62 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
         return "nieuwstip", 90
     if local.startswith(("persvoorlichting", "perscontact")) or words & {"pers", "press", "media"}:
         return "pers", 85
-    if words & {"economie", "lifestyle", "wonen", "cultuur", "tech", "sport", "entertainment", "ondernemen", "zakelijk", "opinie"}:
+    if words & {
+        "economie", "lifestyle", "wonen", "cultuur", "tech", "sport", "entertainment",
+        "ondernemen", "zakelijk", "opinie", "creatief", "hobby", "craft", "boeken",
+    }:
         return "deelredactie", 80
-    if re.search(r"\b(?:redactie\w*|journalist\w*|editor\w*|newsroom|team|medewerker\w*)\b", context, re.I):
+    if editorial_role:
         return "mogelijk_redactiecontact", 70
     if words & {"info", "contact"}:
         return "algemeen", 35
     if re.search(r"\b(?:contact\w*|colofon|pers|press)\b", context, re.I):
         return "mogelijk_contact", 50
     return "overslaan", 0
+
+
+TOPIC_RULES = (
+    (r"\b(?:sport|voetbal|wielrennen|tennis)\b", "sport"),
+    (r"\b(?:economie|economisch|zakelijk|ondernemen|ondernemer|business|finance)\b", "economie en ondernemen"),
+    (r"\b(?:politiek|bestuur|binnenland|buitenland)\b", "politiek en bestuur"),
+    (r"\b(?:cultuur|kunst|boeken|theater|muziek)\b", "kunst en cultuur"),
+    (r"\b(?:lifestyle|mode|fashion|beauty)\b", "lifestyle en mode"),
+    (r"\b(?:wonen|interieur|interior|home deco)\b", "wonen en interieur"),
+    (r"\b(?:tech|technologie|digitaal|wetenschap)\b", "technologie en wetenschap"),
+    (r"\b(?:culinair|food|recept|koken|bakken|gastronomie)\b", "eten en culinair"),
+    (r"\b(?:reizen|travel|toerisme|eropuit)\b", "reizen en toerisme"),
+    (r"\b(?:gezondheid|medisch|zorg)\b", "gezondheid en zorg"),
+    (r"\b(?:kinderen|kids|meiden|ouders|opvoeden)\b", "kinderen en ouders"),
+    (r"\b(?:creatief|creative|craft|knutsel|diy|hobby)\b", "creatief en DIY"),
+    (r"\b(?:amigurumi|haken|haakpatronen|crochet)\b", "haken en amigurumi"),
+    (r"\b(?:breien|breipatronen|knitting)\b", "breien"),
+    (r"\b(?:kaarten maken|hobbykaart|papier|scrapbook)\b", "papier en kaarten maken"),
+    (r"\b(?:textiel|quilt|borduren|naaien|handwerken)\b", "textiel en handwerken"),
+    (r"\b(?:bloemschikken|bloemwerk|floral)\b", "bloemschikken"),
+)
+
+
+def editorial_topic(email: str, context: str = "", medium_theme: str = "", kind: str = "") -> str:
+    """Infer a desk topic only from the published address/context, with the catalog theme as fallback."""
+    local = email.split("@", 1)[0].replace(".", " ").replace("_", " ").replace("-", " ")
+    text = f"{local} {context}".lower()
+    for pattern, label in TOPIC_RULES:
+        if re.search(pattern, text, re.I):
+            return label
+    if kind in {"redactie", "nieuwstip", "deelredactie", "mogelijk_redactiecontact"}:
+        return medium_theme or "algemeen"
+    return ""
+
+
+def contact_matches_target(email: str, context: str, kind: str, keywords: str = "") -> bool:
+    """Keep named shared-publisher contacts only when their nearby role matches the requested title."""
+    wanted = [word.strip().lower() for word in keywords.split("|") if word.strip()]
+    if not wanted:
+        return True
+    local = email.split("@", 1)[0].lower()
+    if kind in {"redactie", "nieuwstip", "pers", "algemeen", "mogelijk_contact"} or local in {"info", "contact"}:
+        return True
+    text = context.lower()
+    if re.search(r"\b(?:chief content officer|chief editor|hoofdredacteur|eindredacteur|alle creatieve merken)\b", text):
+        return True
+    return any(word in text for word in wanted)

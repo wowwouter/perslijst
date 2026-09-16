@@ -20,9 +20,9 @@ De workflow start ook automatisch wanneer de catalogus of scraper op `main` vera
 
 ## Mediabronnen toevoegen
 
-De meegeleverde [`media_catalog.csv`](media_catalog.csv) bevat 188 afzonderlijke media. Daarin staan onder meer 51 actuele NNP-leden, 28 lokale BDU-titels, 41 lokale Rodi-edities, de dertien regionale publieke omroepen en een Limburg-selectie met hoge prioriteit. Iedere regel bewaart ook de openbare catalogusbron waarmee het medium is geselecteerd.
+De meegeleverde [`media_catalog.csv`](media_catalog.csv) combineert landelijke, regionale en lokale nieuwsmedia met een groeiende tijdschriftselectie. De Limburgse catalogus en creatieve tijdschriften hebben hoge prioriteit. Iedere regel bewaart ook de openbare catalogusbron waarmee het medium is geselecteerd.
 
-Voeg een medium toe met een unieke `id`, titel, start-URL, toegestaan domein, categorie, regio, prioriteit en catalogusbron. Meerdere startpagina's mogen hetzelfde `id` hebben. Media op één gedeeld platform, zoals de regionale Rodi-edities, krijgen ieder een eigen `id` en blijven daardoor afzonderlijk in de uitvoer staan.
+Voeg een medium toe met een unieke `id`, titel, publicatie(s), start-URL, toegestaan domein, categorie, provincie, regio, stad, mediumthema, optionele contacttrefwoorden, prioriteit en catalogusbron. Meerdere startpagina's mogen hetzelfde `id` hebben. Media op één gedeeld platform, zoals de regionale Rodi-edities, krijgen ieder een eigen `id` en blijven daardoor afzonderlijk in de uitvoer staan.
 
 `domains.txt` blijft beschikbaar voor een eenvoudige losse run zonder metadata:
 
@@ -44,7 +44,7 @@ python scrape_press.py domains.txt perslijst.csv
 
 ## Resultaten beoordelen
 
-**Contactsoort en score zijn automatische inschattingen.** `mogelijk_redactiecontact` betekent dat de pagina of tekst bij het adres op redactioneel werk wijst. `mogelijk_contact` betekent dat het adres expliciet op een contact-, colofon- of perspagina staat. De titel, categorie en regio komen uit de mediacatalogus.
+**Contactsoort en score zijn automatische inschattingen.** `mogelijk_redactiecontact` betekent dat de pagina of tekst bij het adres op redactioneel werk wijst. `mogelijk_contact` betekent dat het adres expliciet op een contact-, colofon- of perspagina staat. De titel, publicaties, categorie, provincie, regio, stad en het mediumthema komen uit de mediacatalogus. `redactie_onderwerp` wordt uit het gepubliceerde adres en de directe context afgeleid; bij een redactioneel contact zonder expliciete deelredactie gebruikt de scraper het mediumthema als fallback.
 
 De vinddatum in UTC geeft aan wanneer de run plaatsvond. Een adres wordt niet op afleverbaarheid getest. `geen_adressen_gevonden` betekent alleen dat deze crawl niets vond; het bewijst niet dat de website geen contactadres heeft. De toevoeging `_onvolledig` wijst op fouten of bereikte limieten. `niet_uitgelezen` betekent dat geen bruikbare HTML-pagina is gelezen. Bekijk dan `meldingen` en `controle_urls` in het rapport.
 

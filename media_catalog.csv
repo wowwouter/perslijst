@@ -1,190 +1,231 @@
-﻿id,medium,seed_url,scope_domain,categorie,regio,prioriteit,catalogusbron
-l1,L1 Nieuws,https://www.l1.nl/contact/,l1.nl,regionale publieke omroep,Limburg,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-de_limburger,De Limburger,https://help.limburger.nl/redactie/ik-wil-in-contact-komen-met-de-afdeling-redactie,limburger.nl,regionaal dagblad,Limburg,hoog,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-de_limburger,De Limburger,https://www.limburger.nl/,limburger.nl,regionaal dagblad,Limburg,hoog,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-via_weekkrant,VIA Weekkrant,https://www.mediahuis.nl/nl/merken/via-weekkrant,mediahuis.nl,lokale weekkrant,Limburg,hoog,https://www.mediahuis.nl/nl/merken/via-weekkrant
-heuvelland_vandaag,Heuvelland Vandaag,https://www.heuvellandvandaag.nl/,heuvellandvandaag.nl,lokale publieke omroep,Zuid-Limburg,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-mijnstreek_vandaag,Mijnstreek Vandaag,https://www.mijnstreekvandaag.nl/,mijnstreekvandaag.nl,lokale publieke omroep,Westelijke Mijnstreek,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-vml_nieuws,VML Nieuws,https://vmlnieuws.nl/over-voor-midden-limburg/,vmlnieuws.nl,lokale publieke omroep,Midden-Limburg,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-rtv_parkstad,RTV Parkstad,https://rtvparkstad.nl/ons-team/,rtvparkstad.nl,lokale publieke omroep,Parkstad Limburg,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-zo_nws,ZO-NWS,https://zo-nws.nl/node/83,zo-nws.nl,lokale publieke omroep,Parkstad Limburg,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-omroep_venlo,Omroep Venlo,https://omroepvenlo.nl/,omroepvenlo.nl,lokale publieke omroep,Venlo,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-omroep_venray,Omroep Venray,https://www.omroepvenray.nl/,omroepvenray.nl,lokale publieke omroep,Venray,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-rtv_maastricht,RTV Maastricht,https://rtvmaastricht.nl/,rtvmaastricht.nl,lokale publieke omroep,Maastricht,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-omroep_p_m,Omroep P&M,https://omroeppenm.nl/,omroeppenm.nl,lokale publieke omroep,Peel en Maas,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-omroep_landgraaf,Omroep Landgraaf,https://rtvparkstad.nl/,rtvparkstad.nl,lokale publieke omroep,Landgraaf,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-omroep_3heuvelland,Omroep 3Heuvelland,https://www.omroep3heuvelland.nl/,omroep3heuvelland.nl,lokale publieke omroep,Gulpen-Wittem en Vaals,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-omroep_horst,Omroep Horst aan de Maas,https://www.omroephorstaandemaas.nl/,omroephorstaandemaas.nl,lokale publieke omroep,Horst aan de Maas,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-maasland_radio,Maasland Radio / GennepNews,https://maaslandradio.nl/,maaslandradio.nl,lokale publieke omroep,Noord-Limburg,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
-nu_horst,NU Horst aan de Maas,https://www.nuhorstaandemaas.nl/contact,nuhorstaandemaas.nl,lokale nieuwssite,Horst aan de Maas,hoog,https://www.nuhorstaandemaas.nl/
-parkstad_actueel,Parkstad Actueel,https://parkstadactueel.nl/redactie/,parkstadactueel.nl,lokale nieuwssite,Parkstad Limburg,hoog,https://parkstadactueel.nl/
-parkstad_leeft,Parkstad Leeft,https://www.parkstadleeft.nl/,parkstadleeft.nl,lokale krant,Parkstad Limburg,hoog,https://www.parkstadleeft.nl/
-tip_fm,TIP-FM,https://www.tipfm.nl/,tipfm.nl,lokale nieuwssite,Parkstad Limburg,hoog,https://www.tipfm.nl/
-nederweert24,Nederweert24,https://www.nederweert24.nl/contact/,nederweert24.nl,lokale nieuwssite,Nederweert en Weert,hoog,https://www.nederweert24.nl/contact/
-weert_de_gekste,Weertdegekste,https://www.weertdegekste.nl/contact/,weertdegekste.nl,lokale nieuwssite,Weert,hoog,https://www.weertdegekste.nl/contact/
-de_nieuwe_ster,De Nieuwe Ster Maastricht,https://www.denieuwestermaastricht.nl/,denieuwestermaastricht.nl,lokale nieuwssite,Maastricht,hoog,https://www.denieuwestermaastricht.nl/
-wijlimburg,WijLimburg,https://www.wijlimburg.nl/,wijlimburg.nl,regionale zakelijke media,Limburg,hoog,https://www.wijlimburg.nl/
-chapeau,Chapeau Magazine,https://www.chapeaumagazine.com/,chapeaumagazine.com,regionaal magazine,Limburg,hoog,https://www.chapeaumagazine.com/
-nnp_achterhoek_nieuws,Achterhoek Nieuws,http://www.achterhoeknieuws.nl,achterhoeknieuws.nl,lokale krant of uitgever,Lichtenvoorde,normaal,https://www.nnp.nl/leden
-nnp_actief_media,Actief Media,http://www.actiefmedia.nl,actiefmedia.nl,lokale krant of uitgever,Burgum,normaal,https://www.nnp.nl/leden
-nnp_almere_deze_week,Almere DEZE WEEK,http://www.almeredezeweek.nl,almeredezeweek.nl,lokale krant of uitgever,Almere,normaal,https://www.nnp.nl/leden
-nnp_arena_mediacentrum,Arena Mediacentrum,http://www.arenamediacentrum.nl,arenamediacentrum.nl,lokale krant of uitgever,Schaijk,normaal,https://www.nnp.nl/leden
-nnp_bar_lokale_media,BAR Lokale Media,http://www.barlokalemedia.nl,barlokalemedia.nl,lokale krant of uitgever,Barendrecht,normaal,https://www.nnp.nl/leden
-nnp_bdu_media,BDU Media,http://www.bdumedia.nl,bdumedia.nl,lokale krant of uitgever,Barneveld,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_de_bode,Uitgeverij de Bode,http://www.uitgeverijdebode.nl,uitgeverijdebode.nl,lokale krant of uitgever,Zundert,normaal,https://www.nnp.nl/leden
-nnp_brabants_centrum,Brabants Centrum,http://www.brabantscentrum.nl,brabantscentrum.nl,lokale krant of uitgever,Boxtel,normaal,https://www.nnp.nl/leden
-nnp_de_dalfser_marskramer,De Dalfser Marskramer,http://www.dedalfsermarskramer.nl/,dedalfsermarskramer.nl,lokale krant of uitgever,Nieuwleusen,normaal,https://www.nnp.nl/leden
-nnp_brugmedia,BrugMedia,http://www.brugmedia.nl/,brugmedia.nl,lokale krant of uitgever,Kampen,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_de_bunschoter,Uitgeverij De Bunschoter,http://www.debunschoter.nl/,debunschoter.nl,lokale krant of uitgever,Bunschoten-Spakenburg,normaal,https://www.nnp.nl/leden
-nnp_das_mediacentrum,DAS Mediacentrum,http://www.dasmediacentrum.nl,dasmediacentrum.nl,lokale krant of uitgever,Deurne,normaal,https://www.nnp.nl/leden
-nnp_den_heijer_uitgeverij,Den Heijer Uitgeverij,http://www.de-scheveninger.nl,de-scheveninger.nl,lokale krant of uitgever,Scheveningen,normaal,https://www.nnp.nl/leden
-nnp_van_dijk_grafimedia,Van Dijk Grafimedia,http://www.varnws.nl/,varnws.nl,lokale krant of uitgever,Breukelen,normaal,https://www.nnp.nl/leden
-nnp_dordt_centraal,Dordt Centraal,http://www.dordtcentraal.nl,dordtcentraal.nl,lokale krant of uitgever,Dordrecht,normaal,https://www.nnp.nl/leden
-nnp_eendrachtbode,Eendrachtbode,http://www.eendrachtbode.nl/,eendrachtbode.nl,lokale krant of uitgever,Sint Annaland,normaal,https://www.nnp.nl/leden
-nnp_eilanden_nieuws,Eilanden-Nieuws,http://www.eilandennieuws.nl/,eilandennieuws.nl,lokale krant of uitgever,Middelharnis,normaal,https://www.nnp.nl/leden
-nnp_enter_media,Enter Media,http://www.entermedia.nl,entermedia.nl,lokale krant of uitgever,Weesp,normaal,https://www.nnp.nl/leden
-nnp_flevodruk_harlingen_bv,Flevodruk Harlingen BV,http://www.harlingercourant.nl,harlingercourant.nl,lokale krant of uitgever,Harlingen,normaal,https://www.nnp.nl/leden
-nnp_graficelly,Graficelly,http://www.kijkopbodegraven-reeuwijk.nl/,kijkopbodegraven-reeuwijk.nl,lokale krant of uitgever,Reeuwijk,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_groot_hellevoet,Uitgeverij Groot Hellevoet,http://www.groothellevoet.nl/,groothellevoet.nl,lokale krant of uitgever,Hellevoetsluis,normaal,https://www.nnp.nl/leden
-nnp_grootmedia,GrootMedia,http://www.grootmedia.nl,grootmedia.nl,lokale krant of uitgever,Sneek,normaal,https://www.nnp.nl/leden
-nnp_hart_van_holland,Hart van Holland,http://www.hartvanzuidplas.nl,hartvanzuidplas.nl,lokale krant of uitgever,Zevenhuizen,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_jevanhet,Uitgeverij JeVanHet,http://www.wereldregio.nl/,wereldregio.nl,lokale krant of uitgever,Zierikzee,normaal,https://www.nnp.nl/leden
-nnp_de_huis_aan_huis_reklamix,De huis aan huis Reklamix,http://www.drukkerijdekroonolst.nl,drukkerijdekroonolst.nl,lokale krant of uitgever,Olst-Wijhe,normaal,https://www.nnp.nl/leden
-nnp_kontakt_mediapartners,Kontakt Mediapartners,http://www.hetkontakt.nl/,hetkontakt.nl,lokale krant of uitgever,Goudriaan,normaal,https://www.nnp.nl/leden
-nnp_mediabureau_langeveld_en_de_rooy_b_v,Mediabureau Langeveld en de Rooy B.V.,http://www.texelsecourant.nl/,texelsecourant.nl,lokale krant of uitgever,Den Burg,normaal,https://www.nnp.nl/leden
-nnp_media_totaal_noord,Media Totaal Noord,http://www.media-totaal.nl,media-totaal.nl,lokale krant of uitgever,Roden,normaal,https://www.nnp.nl/leden
-nnp_demooikrant_bv,DeMooiKrant BV,http://www.mooirooi.nl,mooirooi.nl,lokale krant of uitgever,Sint Oedenrode,normaal,https://www.nnp.nl/leden
-peel_en_maas,Peel en Maas,http://www.peelenmaasvenray.nl,peelenmaasvenray.nl,lokale krant of uitgever,Venray en Noord-Limburg,hoog,https://www.nnp.nl/leden
-nnp_drukkerij_uitgeverij_nivo,Drukkerij Uitgeverij Nivo,http://www.nieuw-volendam.nl/,nieuw-volendam.nl,lokale krant of uitgever,Volendam,normaal,https://www.nnp.nl/leden
-nnp_regiobode,Regiobode,http://www.regiobode.nl/,regiobode.nl,lokale krant of uitgever,Dieren,normaal,https://www.nnp.nl/leden
-nnp_regio_media_groep,Regio Media Groep,http://www.regiomediagroep.nl,regiomediagroep.nl,lokale krant of uitgever,Aalsmeer,normaal,https://www.nnp.nl/leden
-nnp_rodi_media,Rodi Media,http://www.rodimedia.nl,rodimedia.nl,lokale krant of uitgever,Broek op Langedijk,normaal,https://www.nnp.nl/leden
-nnp_rodi_media_zh,Rodi Media ZH,http://www.delftopzondag.nl,delftopzondag.nl,lokale krant of uitgever,Delft,normaal,https://www.nnp.nl/leden
-nnp_rodi_west_media,Rodi West Media,http://www.rodiwestmedia.nl,rodiwestmedia.nl,lokale krant of uitgever,Maasdijk,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_starters_pers,Uitgeverij Starters Pers,http://www.gemeentenieuwsonline.nl,gemeentenieuwsonline.nl,lokale krant of uitgever,Bemmel,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_stedendriehoek,Uitgeverij Stedendriehoek,http://www.stedendriehoek.nl,stedendriehoek.nl,lokale krant of uitgever,Apeldoorn,normaal,https://www.nnp.nl/leden
-nnp_talvi_uitgeverij,Talvi uitgeverij,http://www.uitgeverij-talvi.nl,uitgeverij-talvi.nl,lokale krant of uitgever,Uden,normaal,https://www.nnp.nl/leden
-nnp_telstar_mediacentrum,Telstar Mediacentrum,http://www.telstarmediacentrum.nl,telstarmediacentrum.nl,lokale krant of uitgever,Pijnacker,normaal,https://www.nnp.nl/leden
-nnp_de_toren,De Toren,http://www.detoren.net/,detoren.net,lokale krant of uitgever,Hardenberg,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_de_uitkomst,UItgeverij De Uitkomst,http://www.de-uitkomst.nl,de-uitkomst.nl,lokale krant of uitgever,De Rijpe,normaal,https://www.nnp.nl/leden
-nnp_uitkijkpost_media,Uitkijkpost Media,http://www.uitkijkpost.nl/,uitkijkpost.nl,lokale krant of uitgever,Heiloo,normaal,https://www.nnp.nl/leden
-nnp_het_urkerland,Het Urkerland,http://www.heturkerland.nl,heturkerland.nl,lokale krant of uitgever,Urk,normaal,https://www.nnp.nl/leden
-nnp_uitgeverij_verhagen,Uitgeverij Verhagen,http://www.uitgeverijverhagen.nl,uitgeverijverhagen.nl,lokale krant of uitgever,Katwijk aan Zee,normaal,https://www.nnp.nl/leden
-nnp_vermeulen_steenbergen,Vermeulen Steenbergen,http://www.vermeulensteenbergen.nl/,vermeulensteenbergen.nl,lokale krant of uitgever,Steenbergen,normaal,https://www.nnp.nl/leden
-nnp_voorster_nieuws,Voorster Nieuws,http://www.voorsternieuws.nl,voorsternieuws.nl,lokale krant of uitgever,Twello,normaal,https://www.nnp.nl/leden
-nnp_de_wassenaarse_krant_bv,De Wassenaarse Krant BV,https://www.dewassenaarsekrant.nl,dewassenaarsekrant.nl,lokale krant of uitgever,Wassenaar,normaal,https://www.nnp.nl/leden
-nnp_wijchens_weekblad_wegwijs,Wijchens Weekblad Wegwijs,http://www.weekblad-wegwijs.nl/,weekblad-wegwijs.nl,lokale krant of uitgever,Wijchen,normaal,https://www.nnp.nl/leden
-nnp_xebius_media_groep,Xebius Media Groep,https://www.xebius.nl,xebius.nl,lokale krant of uitgever,Hendrik-Ido-Ambacht,normaal,https://www.nnp.nl/leden
-bdu_baarn_huis_aan_huis,De Week Regio Baarn,https://www.baarnschecourant.nl,baarnschecourant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/baarn-huis-aan-huis
-bdu_bunniks_nieuws,Bunniks Nieuws,https://www.bunniksnieuws.nl,bunniksnieuws.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/bunniks-nieuws
-bdu_barneveld_huis_aan_huis,De Week Regio Barneveld,https://www.barneveldsekrant.nl,barneveldsekrant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/barneveld-huis-aan-huis
-bdu_de_puttenaer,De Puttenaer,https://www.deputtenaer.nl,deputtenaer.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/de-puttenaer
-bdu_baarnsche_courant,Baarnsche Courant,https://www.baarnschecourant.nl,baarnschecourant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/baarnsche-courant
-bdu_barneveldse_krant,Barneveldse Krant,https://www.barneveldsekrant.nl/,barneveldsekrant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/barneveldse-krant
-bdu_de_nieuwsbode,De Nieuwsbode,https://www.denieuwsbode.nl,denieuwsbode.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/de-nieuwsbode
-bdu_de_stad_amersfoort,De Stad Amersfoort,https://www.destadamersfoort.nl,destadamersfoort.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/de-stad-amersfoort
-bdu_het_kompas_hardinxveld_giessendam,Het Kompas Hardinxveld-Giessendam,https://www.hetkompashardinxveld-giessendam.nl/,hetkompashardinxveld-giessendam.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/het-kompas-hardinxveld-giessendam
-bdu_ede_stad,Ede Stad,https://edestad.nl,edestad.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/ede-stad
-bdu_de_rijnpost,De Rijnpost,https://derijnpost.nl,derijnpost.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/de-rijnpost
-bdu_de_stad_gorinchem,De Stad Gorinchem,https://www.destadgorinchem.nl/,destadgorinchem.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/de-stad-gorinchem
-bdu_harderwijker_courant,Harderwijker Courant,https://www.harderwijkercourant.nl/,harderwijkercourant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/harderwijker-courant
-bdu_de_woudenberger,De Woudenberger,https://www.dewoudenberger.nl,dewoudenberger.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/de-woudenberger
-bdu_ermelos_weekblad,Ermelo's Weekblad,https://ermelosweekblad.nl,ermelosweekblad.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/ermelos-weekblad
-bdu_nieuwsblad_de_kaap,Nieuwsblad De Kaap,https://www.nieuwsbladdekaap.nl,nieuwsbladdekaap.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/nieuwsblad-de-kaap
-bdu_recreatiekrant_veluwe,Recreatiekrant Veluwe,https://www.recreatiekrantveluwe.nl,recreatiekrantveluwe.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/recreatiekrant-veluwe
-bdu_regiosport_veenendaal,Regiosport Veenendaal,https://www.regiosportveenendaal.nl,regiosportveenendaal.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/regiosport-veenendaal
-bdu_het_kompas_sliedrecht,Het Kompas Sliedrecht,https://www.hetkompassliedrecht.nl/,hetkompassliedrecht.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/het-kompas-sliedrecht
-bdu_houtens_nieuws,Houtens Nieuws,https://www.houtensnieuws.nl,houtensnieuws.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/houtens-nieuws
-bdu_leusder_krant,Leusder Krant,https://www.leusderkrant.nl,leusderkrant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/leusder-krant
-bdu_rijn_en_veluwe,Rijn en Veluwe,https://www.rijnenveluwe.nl/,rijnenveluwe.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/rijn-en-veluwe
-bdu_stad_wageningen,Stad Wageningen,https://stadwageningen.nl,stadwageningen.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/stad-wageningen
-bdu_soester_courant,Soester Courant,https://www.soestercourant.nl,soestercourant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/soester-courant
-bdu_scherpenzeelse_krant,Scherpenzeelse Krant,https://www.scherpenzeelsekrant.nl,scherpenzeelsekrant.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/scherpenzeelse-krant
-bdu_stad_nijkerk_nl,De Stad Nijkerk,https://www.destadnijkerk.nl,destadnijkerk.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/stad-nijkerk-nl
-bdu_vierklank,Vierklank,https://www.vierklank.nl,vierklank.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/vierklank
-bdu_wijks_nieuws,Wijks Nieuws,https://www.wijksnieuws.nl,wijksnieuws.nl,lokale krant,Nederland lokaal,normaal,https://bdumedia.nl/nieuwsmerk/wijks-nieuws
-rodi_alkmaar,Rodi Alkmaar,https://www.rodi.nl/alkmaar/nieuws/insturen,rodi.nl,lokale krant,Alkmaar,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_alphen_aan_den_rijn,Rodi Alphen aan den Rijn,https://www.rodi.nl/alphenaandenrijn/nieuws/insturen,rodi.nl,lokale krant,Alphen aan den Rijn,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_amsterdam_nieuw_west,Rodi Amsterdam Nieuw-West,https://www.rodi.nl/amsterdam-nieuw-west/nieuws/insturen,rodi.nl,lokale krant,Amsterdam Nieuw-West,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_amsterdam_noord,Rodi Amsterdam-Noord,https://www.rodi.nl/amsterdam-noord/nieuws/insturen,rodi.nl,lokale krant,Amsterdam-Noord,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_bergen,Rodi Bergen,https://www.rodi.nl/bergen/nieuws/insturen,rodi.nl,lokale krant,Bergen,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_beverwijk,Rodi Beverwijk,https://www.rodi.nl/beverwijk/nieuws/insturen,rodi.nl,lokale krant,Beverwijk,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_castricum,Rodi Castricum,https://www.rodi.nl/castricum/nieuws/insturen,rodi.nl,lokale krant,Castricum,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_den_haag,Rodi Den Haag,https://www.rodi.nl/denhaag/nieuws/insturen,rodi.nl,lokale krant,Den Haag,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_den_helder,Rodi Den Helder,https://www.rodi.nl/denhelder/nieuws/insturen,rodi.nl,lokale krant,Den Helder,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_dijk_en_waard,Rodi Dijk en Waard,https://www.rodi.nl/dijkenwaard/nieuws/insturen,rodi.nl,lokale krant,Dijk en Waard,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_drechterland,Rodi Drechterland,https://www.rodi.nl/drechterland/nieuws/insturen,rodi.nl,lokale krant,Drechterland,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_edam_volendam,Rodi Edam - Volendam,https://www.rodi.nl/edam-volendam/nieuws/insturen,rodi.nl,lokale krant,Edam - Volendam,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_enkhuizen,Rodi Enkhuizen,https://www.rodi.nl/enkhuizen/nieuws/insturen,rodi.nl,lokale krant,Enkhuizen,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_haarlem,Rodi Haarlem,https://www.rodi.nl/haarlem/nieuws/insturen,rodi.nl,lokale krant,Haarlem,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_haarlemmermeer,Rodi Haarlemmermeer,https://www.rodi.nl/haarlemmermeer/nieuws/insturen,rodi.nl,lokale krant,Haarlemmermeer,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_heemskerk,Rodi Heemskerk,https://www.rodi.nl/heemskerk/nieuws/insturen,rodi.nl,lokale krant,Heemskerk,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_heiloo,Rodi Heiloo,https://www.rodi.nl/heiloo/nieuws/insturen,rodi.nl,lokale krant,Heiloo,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_hoek_van_holland,Rodi Hoek van Holland,https://www.rodi.nl/hoekvanholland/nieuws/insturen,rodi.nl,lokale krant,Hoek van Holland,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_hollands_kroon,Rodi Hollands Kroon,https://www.rodi.nl/hollandskroon/nieuws/insturen,rodi.nl,lokale krant,Hollands Kroon,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_hoorn,Rodi Hoorn,https://www.rodi.nl/hoorn/nieuws/insturen,rodi.nl,lokale krant,Hoorn,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_kaag_en_braassem,Rodi Kaag en Braassem,https://www.rodi.nl/kaagenbraassem/nieuws/insturen,rodi.nl,lokale krant,Kaag en Braassem,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_koggenland,Rodi Koggenland,https://www.rodi.nl/koggenland/nieuws/insturen,rodi.nl,lokale krant,Koggenland,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_landsmeer,Rodi Landsmeer,https://www.rodi.nl/landsmeer/nieuws/insturen,rodi.nl,lokale krant,Landsmeer,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_maassluis,Rodi Maassluis,https://www.rodi.nl/maassluis/nieuws/insturen,rodi.nl,lokale krant,Maassluis,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_medemblik,Rodi Medemblik,https://www.rodi.nl/medemblik/nieuws/insturen,rodi.nl,lokale krant,Medemblik,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_midden_delfland,Rodi Midden-Delfland,https://www.rodi.nl/midden-delfland/nieuws/insturen,rodi.nl,lokale krant,Midden-Delfland,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_nieuwkoop,Rodi Nieuwkoop,https://www.rodi.nl/nieuwkoop/nieuws/insturen,rodi.nl,lokale krant,Nieuwkoop,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_oostzaan,Rodi Oostzaan,https://www.rodi.nl/oostzaan/nieuws/insturen,rodi.nl,lokale krant,Oostzaan,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_opmeer,Rodi Opmeer,https://www.rodi.nl/opmeer/nieuws/insturen,rodi.nl,lokale krant,Opmeer,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_purmerend,Rodi Purmerend,https://www.rodi.nl/purmerend/nieuws/insturen,rodi.nl,lokale krant,Purmerend,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_rijswijk,Rodi Rijswijk,https://www.rodi.nl/rijswijk/nieuws/insturen,rodi.nl,lokale krant,Rijswijk,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_rozenburg,Rodi Rozenburg,https://www.rodi.nl/rozenburg/nieuws/insturen,rodi.nl,lokale krant,Rozenburg,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_schagen,Rodi Schagen,https://www.rodi.nl/schagen/nieuws/insturen,rodi.nl,lokale krant,Schagen,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_schiedam,Rodi Schiedam,https://www.rodi.nl/schiedam/nieuws/insturen,rodi.nl,lokale krant,Schiedam,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_stede_broec,Rodi Stede Broec,https://www.rodi.nl/stedebroec/nieuws/insturen,rodi.nl,lokale krant,Stede Broec,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_uitgeest,Rodi Uitgeest,https://www.rodi.nl/uitgeest/nieuws/insturen,rodi.nl,lokale krant,Uitgeest,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_vlaardingen,Rodi Vlaardingen,https://www.rodi.nl/vlaardingen/nieuws/insturen,rodi.nl,lokale krant,Vlaardingen,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_waterland,Rodi Waterland,https://www.rodi.nl/waterland/nieuws/insturen,rodi.nl,lokale krant,Waterland,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_westland,Rodi Westland,https://www.rodi.nl/westland/nieuws/insturen,rodi.nl,lokale krant,Westland,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_wormerland,Rodi Wormerland,https://www.rodi.nl/wormerland/nieuws/insturen,rodi.nl,lokale krant,Wormerland,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rodi_zaanstad,Rodi Zaanstad,https://www.rodi.nl/zaanstad/nieuws/insturen,rodi.nl,lokale krant,Zaanstad,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
-rpo_rtv_noord,RTV Noord,http://www.rtvnoord.nl/,rtvnoord.nl,regionale publieke omroep,Groningen,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_omrop_fryslan,Omrop Fryslân,http://www.omropfryslan.nl/,omropfryslan.nl,regionale publieke omroep,Friesland,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_rtv_drenthe,RTV Drenthe,http://www.rtvdrenthe.nl/,rtvdrenthe.nl,regionale publieke omroep,Drenthe,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_nh_nieuws,NH Nieuws,http://www.nhnieuws.nl/,nhnieuws.nl,regionale publieke omroep,Noord-Holland,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_omroep_flevoland,Omroep Flevoland,http://www.omroepflevoland.nl/,omroepflevoland.nl,regionale publieke omroep,Flevoland,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_rtv_oost,RTV Oost,http://www.rtvoost.nl/,rtvoost.nl,regionale publieke omroep,Overijssel,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_rtv_utrecht,RTV Utrecht,http://www.rtvutrecht.nl/,rtvutrecht.nl,regionale publieke omroep,Utrecht,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_omroep_gelderland,Omroep Gelderland,http://www.omroepgelderland.nl/,omroepgelderland.nl,regionale publieke omroep,Gelderland,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_omroep_west,Omroep West,http://www.omroepwest.nl/,omroepwest.nl,regionale publieke omroep,Zuid-Holland,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_omroep_zeeland,Omroep Zeeland,http://www.omroepzeeland.nl/,omroepzeeland.nl,regionale publieke omroep,Zeeland,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_rijnmond,Rijnmond,http://www.rijnmond.nl/,rijnmond.nl,regionale publieke omroep,Rotterdam-Rijnmond,normaal,https://www.stichtingrpo.nl/omroepen/
-rpo_omroep_brabant,Omroep Brabant,https://www.omroepbrabant.nl/,omroepbrabant.nl,regionale publieke omroep,Noord-Brabant,normaal,https://www.stichtingrpo.nl/omroepen/
-ndp_reformatorisch_dagblad,Reformatorisch Dagblad,https://www.rd.nl,rd.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_het_financieele_dagblad,Het Financieele Dagblad,https://fd.nl/,fd.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_bnr_nieuwsradio,BNR Nieuwsradio,https://www.bnr.nl/,bnr.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_de_groene_amsterdammer,De Groene Amsterdammer,https://www.groene.nl/,groene.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_ad,AD,https://www.ad.nl/,ad.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_het_parool,Het Parool,https://www.parool.nl/,parool.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_trouw,Trouw,https://www.trouw.nl/,trouw.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_de_volkskrant,de Volkskrant,https://www.volkskrant.nl/,volkskrant.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_bn_destem,BN DeStem,https://www.bndestem.nl/,bndestem.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_brabants_dagblad,Brabants Dagblad,https://www.bd.nl/,bd.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_eindhovens_dagblad,Eindhovens Dagblad,https://www.ed.nl/,ed.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_de_gelderlander,de Gelderlander,https://www.gelderlander.nl/,gelderlander.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_pzc,PZC,https://www.pzc.nl/,pzc.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_de_stentor,de Stentor,https://www.destentor.nl/,destentor.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_tubantia,Tubantia,https://www.tubantia.nl/,tubantia.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_nu_nl,NU.nl,https://www.nu.nl/,nu.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_de_telegraaf,De Telegraaf,https://www.telegraaf.nl/,telegraaf.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_de_gooi_en_eemlander,De Gooi- en Eemlander,https://www.gooieneemlander.nl/,gooieneemlander.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_haarlems_dagblad,Haarlems Dagblad,https://www.haarlemsdagblad.nl/,haarlemsdagblad.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_noordhollands_dagblad,Noordhollands Dagblad,https://www.noordhollandsdagblad.nl/,noordhollandsdagblad.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_leidsch_dagblad,Leidsch Dagblad,https://www.leidschdagblad.nl/,leidschdagblad.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_ijmuider_courant,IJmuider Courant,https://www.ijmuidercourant.nl/,ijmuidercourant.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_friesch_dagblad,Friesch Dagblad,https://www.frieschdagblad.nl/,frieschdagblad.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_leeuwarder_courant,Leeuwarder Courant,https://www.lc.nl/,lc.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_dagblad_van_het_noorden,Dagblad van het Noorden,https://www.dvhn.nl/,dvhn.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_nrc,NRC,https://www.nrc.nl/,nrc.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_nederlands_dagblad,Nederlands Dagblad,https://www.nd.nl/,nd.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_ew,EW,https://www.ewmagazine.nl/,ewmagazine.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_editie_nl,Editie NL,https://www.rtlnieuws.nl/editienl,rtlnieuws.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_rtl_nieuws,RTL Nieuws,https://www.rtlnieuws.nl/,rtlnieuws.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_rtl_z,RTL Z,https://www.rtlz.nl/,rtlz.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
-ndp_vrij_nederland,Vrij Nederland,https://www.vn.nl/,vn.nl,landelijk of regionaal nieuws,Nederland,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+﻿id,medium,publicaties,seed_url,scope_domain,categorie,provincie,regio,stad,mediumthema,contact_trefwoorden,prioriteit,catalogusbron
+l1,L1 Nieuws,L1 Nieuws,https://www.l1.nl/contact/,l1.nl,regionale publieke omroep,Limburg,Provinciebreed,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+de_limburger,De Limburger,De Limburger,https://help.limburger.nl/redactie/ik-wil-in-contact-komen-met-de-afdeling-redactie,limburger.nl,regionaal dagblad,Limburg,Provinciebreed,,algemeen nieuws,,hoog,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+de_limburger,De Limburger,De Limburger,https://www.limburger.nl/,limburger.nl,regionaal dagblad,Limburg,Provinciebreed,,algemeen nieuws,,hoog,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+via_weekkrant,VIA Weekkrant,VIA Weekkrant,https://www.mediahuis.nl/nl/merken/via-weekkrant,mediahuis.nl,lokale weekkrant,Limburg,Provinciebreed,,algemeen nieuws,,hoog,https://www.mediahuis.nl/nl/merken/via-weekkrant
+heuvelland_vandaag,Heuvelland Vandaag,Heuvelland Vandaag,https://www.heuvellandvandaag.nl/,heuvellandvandaag.nl,lokale publieke omroep,Limburg,Zuid-Limburg,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+mijnstreek_vandaag,Mijnstreek Vandaag,Mijnstreek Vandaag,https://www.mijnstreekvandaag.nl/,mijnstreekvandaag.nl,lokale publieke omroep,Limburg,Westelijke Mijnstreek,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+vml_nieuws,VML Nieuws,VML Nieuws,https://vmlnieuws.nl/over-voor-midden-limburg/,vmlnieuws.nl,lokale publieke omroep,Limburg,Midden-Limburg,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+rtv_parkstad,RTV Parkstad,RTV Parkstad,https://rtvparkstad.nl/ons-team/,rtvparkstad.nl,lokale publieke omroep,Limburg,Parkstad,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+zo_nws,ZO-NWS,ZO-NWS,https://zo-nws.nl/node/83,zo-nws.nl,lokale publieke omroep,Limburg,Parkstad,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+omroep_venlo,Omroep Venlo,Omroep Venlo,https://omroepvenlo.nl/,omroepvenlo.nl,lokale publieke omroep,Limburg,Noord-Limburg,Venlo,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+omroep_venray,Omroep Venray,Omroep Venray,https://www.omroepvenray.nl/,omroepvenray.nl,lokale publieke omroep,Limburg,Noord-Limburg,Venray,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+rtv_maastricht,RTV Maastricht,RTV Maastricht,https://rtvmaastricht.nl/,rtvmaastricht.nl,lokale publieke omroep,Limburg,Zuid-Limburg,Maastricht,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+omroep_p_m,Omroep P&M,Omroep P&M,https://omroeppenm.nl/,omroeppenm.nl,lokale publieke omroep,Limburg,Noord-Limburg,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+omroep_landgraaf,Omroep Landgraaf,Omroep Landgraaf,https://rtvparkstad.nl/,rtvparkstad.nl,lokale publieke omroep,Limburg,Parkstad,Landgraaf,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+omroep_3heuvelland,Omroep 3Heuvelland,Omroep 3Heuvelland,https://www.omroep3heuvelland.nl/,omroep3heuvelland.nl,lokale publieke omroep,Limburg,Heuvelland,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+omroep_horst,Omroep Horst aan de Maas,Omroep Horst aan de Maas,https://www.omroephorstaandemaas.nl/,omroephorstaandemaas.nl,lokale publieke omroep,Limburg,Noord-Limburg,Horst,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+maasland_radio,Maasland Radio / GennepNews,Maasland Radio / GennepNews,https://maaslandradio.nl/,maaslandradio.nl,lokale publieke omroep,Limburg,Noord-Limburg,,algemeen nieuws,,hoog,https://www.nlpo.nl/delokaleomroepinkaart/
+nu_horst,NU Horst aan de Maas,NU Horst aan de Maas,https://www.nuhorstaandemaas.nl/contact,nuhorstaandemaas.nl,lokale nieuwssite,Limburg,Noord-Limburg,Horst,algemeen nieuws,,hoog,https://www.nuhorstaandemaas.nl/
+parkstad_actueel,Parkstad Actueel,Parkstad Actueel,https://parkstadactueel.nl/redactie/,parkstadactueel.nl,lokale nieuwssite,Limburg,Parkstad,,algemeen nieuws,,hoog,https://parkstadactueel.nl/
+parkstad_leeft,Parkstad Leeft,Parkstad Leeft,https://www.parkstadleeft.nl/,parkstadleeft.nl,lokale krant,Limburg,Parkstad,,algemeen nieuws,,hoog,https://www.parkstadleeft.nl/
+tip_fm,TIP-FM,TIP-FM,https://www.tipfm.nl/,tipfm.nl,lokale nieuwssite,Limburg,Parkstad,,algemeen nieuws,,hoog,https://www.tipfm.nl/
+nederweert24,Nederweert24,Nederweert24,https://www.nederweert24.nl/contact/,nederweert24.nl,lokale nieuwssite,Limburg,Midden-Limburg,,algemeen nieuws,,hoog,https://www.nederweert24.nl/contact/
+weert_de_gekste,Weertdegekste,Weertdegekste,https://www.weertdegekste.nl/contact/,weertdegekste.nl,lokale nieuwssite,Limburg,Midden-Limburg,Weert,algemeen nieuws,,hoog,https://www.weertdegekste.nl/contact/
+de_nieuwe_ster,De Nieuwe Ster Maastricht,De Nieuwe Ster Maastricht,https://www.denieuwestermaastricht.nl/,denieuwestermaastricht.nl,lokale nieuwssite,Limburg,Zuid-Limburg,Maastricht,algemeen nieuws,,hoog,https://www.denieuwestermaastricht.nl/
+wijlimburg,WijLimburg,WijLimburg,https://www.wijlimburg.nl/,wijlimburg.nl,regionale zakelijke media,Limburg,Provinciebreed,,economie en ondernemen,,hoog,https://www.wijlimburg.nl/
+chapeau,Chapeau Magazine,Chapeau Magazine,https://www.chapeaumagazine.com/,chapeaumagazine.com,regionaal magazine,Limburg,Provinciebreed,,"lifestyle, gastronomie en ondernemen",,hoog,https://www.chapeaumagazine.com/
+nnp_achterhoek_nieuws,Achterhoek Nieuws,Achterhoek Nieuws,http://www.achterhoeknieuws.nl,achterhoeknieuws.nl,lokale krant of uitgever,Gelderland,Achterhoek,Lichtenvoorde,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_actief_media,Actief Media,Actief Media,http://www.actiefmedia.nl,actiefmedia.nl,lokale krant of uitgever,Friesland,Noordoost-Friesland,Burgum,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_almere_deze_week,Almere DEZE WEEK,Almere DEZE WEEK,http://www.almeredezeweek.nl,almeredezeweek.nl,lokale krant of uitgever,Flevoland,Flevoland,Almere,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_arena_mediacentrum,Arena Mediacentrum,Arena Mediacentrum,http://www.arenamediacentrum.nl,arenamediacentrum.nl,lokale krant of uitgever,Noord-Brabant,Noordoost-Brabant,Schaijk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_bar_lokale_media,BAR Lokale Media,BAR Lokale Media,http://www.barlokalemedia.nl,barlokalemedia.nl,lokale krant of uitgever,Zuid-Holland,Rotterdam-Rijnmond,Barendrecht,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_bdu_media,BDU Media,BDU Media,http://www.bdumedia.nl,bdumedia.nl,lokale krant of uitgever,Gelderland,Gelderse Vallei,Barneveld,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_de_bode,Uitgeverij de Bode,Uitgeverij de Bode,http://www.uitgeverijdebode.nl,uitgeverijdebode.nl,lokale krant of uitgever,Noord-Brabant,West-Brabant,Zundert,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_brabants_centrum,Brabants Centrum,Brabants Centrum,http://www.brabantscentrum.nl,brabantscentrum.nl,lokale krant of uitgever,Noord-Brabant,Meierij,Boxtel,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_de_dalfser_marskramer,De Dalfser Marskramer,De Dalfser Marskramer,http://www.dedalfsermarskramer.nl/,dedalfsermarskramer.nl,lokale krant of uitgever,Overijssel,Vechtdal,Nieuwleusen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_brugmedia,BrugMedia,BrugMedia,http://www.brugmedia.nl/,brugmedia.nl,lokale krant of uitgever,Overijssel,IJsseldelta,Kampen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_de_bunschoter,Uitgeverij De Bunschoter,Uitgeverij De Bunschoter,http://www.debunschoter.nl/,debunschoter.nl,lokale krant of uitgever,Utrecht,Eemland,Bunschoten-Spakenburg,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_das_mediacentrum,DAS Mediacentrum,DAS Mediacentrum,http://www.dasmediacentrum.nl,dasmediacentrum.nl,lokale krant of uitgever,Noord-Brabant,De Peel,Deurne,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_den_heijer_uitgeverij,Den Heijer Uitgeverij,Den Heijer Uitgeverij,http://www.de-scheveninger.nl,de-scheveninger.nl,lokale krant of uitgever,Zuid-Holland,Haaglanden,Scheveningen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_van_dijk_grafimedia,Van Dijk Grafimedia,Van Dijk Grafimedia,http://www.varnws.nl/,varnws.nl,lokale krant of uitgever,Utrecht,Vechtstreek,Breukelen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_dordt_centraal,Dordt Centraal,Dordt Centraal,http://www.dordtcentraal.nl,dordtcentraal.nl,lokale krant of uitgever,Zuid-Holland,Drechtsteden,Dordrecht,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_eendrachtbode,Eendrachtbode,Eendrachtbode,http://www.eendrachtbode.nl/,eendrachtbode.nl,lokale krant of uitgever,Zeeland,Tholen,Sint-Annaland,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_eilanden_nieuws,Eilanden-Nieuws,Eilanden-Nieuws,http://www.eilandennieuws.nl/,eilandennieuws.nl,lokale krant of uitgever,Zuid-Holland,Goeree-Overflakkee,Middelharnis,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_enter_media,Enter Media,Enter Media,http://www.entermedia.nl,entermedia.nl,lokale krant of uitgever,Noord-Holland,Gooi en Vechtstreek,Weesp,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_flevodruk_harlingen_bv,Flevodruk Harlingen BV,Flevodruk Harlingen BV,http://www.harlingercourant.nl,harlingercourant.nl,lokale krant of uitgever,Friesland,Noordwest-Friesland,Harlingen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_graficelly,Graficelly,Graficelly,http://www.kijkopbodegraven-reeuwijk.nl/,kijkopbodegraven-reeuwijk.nl,lokale krant of uitgever,Zuid-Holland,Groene Hart,Reeuwijk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_groot_hellevoet,Uitgeverij Groot Hellevoet,Uitgeverij Groot Hellevoet,http://www.groothellevoet.nl/,groothellevoet.nl,lokale krant of uitgever,Zuid-Holland,Voorne-Putten,Hellevoetsluis,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_grootmedia,GrootMedia,GrootMedia,http://www.grootmedia.nl,grootmedia.nl,lokale krant of uitgever,Friesland,Zuidwest-Friesland,Sneek,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_hart_van_holland,Hart van Holland,Hart van Holland,http://www.hartvanzuidplas.nl,hartvanzuidplas.nl,lokale krant of uitgever,Zuid-Holland,Zuidplas,Zevenhuizen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_jevanhet,Uitgeverij JeVanHet,Uitgeverij JeVanHet,http://www.wereldregio.nl/,wereldregio.nl,lokale krant of uitgever,Zeeland,Schouwen-Duiveland,Zierikzee,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_de_huis_aan_huis_reklamix,De huis aan huis Reklamix,De huis aan huis Reklamix,http://www.drukkerijdekroonolst.nl,drukkerijdekroonolst.nl,lokale krant of uitgever,Overijssel,Salland,,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_kontakt_mediapartners,Kontakt Mediapartners,Kontakt Mediapartners,http://www.hetkontakt.nl/,hetkontakt.nl,lokale krant of uitgever,Zuid-Holland,Alblasserwaard,Goudriaan,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_mediabureau_langeveld_en_de_rooy_b_v,Mediabureau Langeveld en de Rooy B.V.,Mediabureau Langeveld en de Rooy B.V.,http://www.texelsecourant.nl/,texelsecourant.nl,lokale krant of uitgever,Noord-Holland,Texel,Den Burg,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_media_totaal_noord,Media Totaal Noord,Media Totaal Noord,http://www.media-totaal.nl,media-totaal.nl,lokale krant of uitgever,Drenthe,Noordenveld,Roden,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_demooikrant_bv,DeMooiKrant BV,DeMooiKrant BV,http://www.mooirooi.nl,mooirooi.nl,lokale krant of uitgever,Noord-Brabant,Meierij,Sint-Oedenrode,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+peel_en_maas,Peel en Maas,Peel en Maas,http://www.peelenmaasvenray.nl,peelenmaasvenray.nl,lokale krant of uitgever,Limburg,Noord-Limburg,Venray,algemeen nieuws,,hoog,https://www.nnp.nl/leden
+nnp_drukkerij_uitgeverij_nivo,Drukkerij Uitgeverij Nivo,Drukkerij Uitgeverij Nivo,http://www.nieuw-volendam.nl/,nieuw-volendam.nl,lokale krant of uitgever,Noord-Holland,Waterland,Volendam,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_regiobode,Regiobode,Regiobode,http://www.regiobode.nl/,regiobode.nl,lokale krant of uitgever,Gelderland,Veluwezoom,Dieren,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_regio_media_groep,Regio Media Groep,Regio Media Groep,http://www.regiomediagroep.nl,regiomediagroep.nl,lokale krant of uitgever,Noord-Holland,Amstelland,Aalsmeer,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_rodi_media,Rodi Media,Rodi Media,http://www.rodimedia.nl,rodimedia.nl,lokale krant of uitgever,Noord-Holland,Noord-Kennemerland,Broek op Langedijk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_rodi_media_zh,Rodi Media ZH,Rodi Media ZH,http://www.delftopzondag.nl,delftopzondag.nl,lokale krant of uitgever,Zuid-Holland,Haaglanden,Delft,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_rodi_west_media,Rodi West Media,Rodi West Media,http://www.rodiwestmedia.nl,rodiwestmedia.nl,lokale krant of uitgever,Zuid-Holland,Westland,Maasdijk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_starters_pers,Uitgeverij Starters Pers,Uitgeverij Starters Pers,http://www.gemeentenieuwsonline.nl,gemeentenieuwsonline.nl,lokale krant of uitgever,Gelderland,Lingewaard,Bemmel,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_stedendriehoek,Uitgeverij Stedendriehoek,Uitgeverij Stedendriehoek,http://www.stedendriehoek.nl,stedendriehoek.nl,lokale krant of uitgever,Gelderland,Stedendriehoek,Apeldoorn,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_talvi_uitgeverij,Talvi uitgeverij,Talvi uitgeverij,http://www.uitgeverij-talvi.nl,uitgeverij-talvi.nl,lokale krant of uitgever,Noord-Brabant,Noordoost-Brabant,Uden,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_telstar_mediacentrum,Telstar Mediacentrum,Telstar Mediacentrum,http://www.telstarmediacentrum.nl,telstarmediacentrum.nl,lokale krant of uitgever,Zuid-Holland,Haaglanden,Pijnacker,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_de_toren,De Toren,De Toren,http://www.detoren.net/,detoren.net,lokale krant of uitgever,Overijssel,Vechtdal,Hardenberg,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_de_uitkomst,UItgeverij De Uitkomst,UItgeverij De Uitkomst,http://www.de-uitkomst.nl,de-uitkomst.nl,lokale krant of uitgever,Noord-Holland,Land van Leeghwater,De Rijp,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitkijkpost_media,Uitkijkpost Media,Uitkijkpost Media,http://www.uitkijkpost.nl/,uitkijkpost.nl,lokale krant of uitgever,Noord-Holland,Noord-Kennemerland,Heiloo,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_het_urkerland,Het Urkerland,Het Urkerland,http://www.heturkerland.nl,heturkerland.nl,lokale krant of uitgever,Flevoland,Flevoland,Urk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_uitgeverij_verhagen,Uitgeverij Verhagen,Uitgeverij Verhagen,http://www.uitgeverijverhagen.nl,uitgeverijverhagen.nl,lokale krant of uitgever,Zuid-Holland,Duin- en Bollenstreek,Katwijk,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_vermeulen_steenbergen,Vermeulen Steenbergen,Vermeulen Steenbergen,http://www.vermeulensteenbergen.nl/,vermeulensteenbergen.nl,lokale krant of uitgever,Noord-Brabant,West-Brabant,Steenbergen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_voorster_nieuws,Voorster Nieuws,Voorster Nieuws,http://www.voorsternieuws.nl,voorsternieuws.nl,lokale krant of uitgever,Gelderland,Stedendriehoek,Twello,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_de_wassenaarse_krant_bv,De Wassenaarse Krant BV,De Wassenaarse Krant BV,https://www.dewassenaarsekrant.nl,dewassenaarsekrant.nl,lokale krant of uitgever,Zuid-Holland,Haaglanden,Wassenaar,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_wijchens_weekblad_wegwijs,Wijchens Weekblad Wegwijs,Wijchens Weekblad Wegwijs,http://www.weekblad-wegwijs.nl/,weekblad-wegwijs.nl,lokale krant of uitgever,Gelderland,Rijk van Nijmegen,Wijchen,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+nnp_xebius_media_groep,Xebius Media Groep,Xebius Media Groep,https://www.xebius.nl,xebius.nl,lokale krant of uitgever,Zuid-Holland,Drechtsteden,Hendrik-Ido-Ambacht,algemeen nieuws,,normaal,https://www.nnp.nl/leden
+bdu_baarn_huis_aan_huis,De Week Regio Baarn,De Week Regio Baarn,https://www.baarnschecourant.nl,baarnschecourant.nl,lokale krant,Utrecht,Eemland,Baarn,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/baarn-huis-aan-huis
+bdu_bunniks_nieuws,Bunniks Nieuws,Bunniks Nieuws,https://www.bunniksnieuws.nl,bunniksnieuws.nl,lokale krant,Utrecht,Kromme Rijnstreek,Bunnik,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/bunniks-nieuws
+bdu_barneveld_huis_aan_huis,De Week Regio Barneveld,De Week Regio Barneveld,https://www.barneveldsekrant.nl,barneveldsekrant.nl,lokale krant,Gelderland,Gelderse Vallei,Barneveld,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/barneveld-huis-aan-huis
+bdu_de_puttenaer,De Puttenaer,De Puttenaer,https://www.deputtenaer.nl,deputtenaer.nl,lokale krant,Gelderland,Veluwe,Putten,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/de-puttenaer
+bdu_baarnsche_courant,Baarnsche Courant,Baarnsche Courant,https://www.baarnschecourant.nl,baarnschecourant.nl,lokale krant,Utrecht,Eemland,Baarn,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/baarnsche-courant
+bdu_barneveldse_krant,Barneveldse Krant,Barneveldse Krant,https://www.barneveldsekrant.nl/,barneveldsekrant.nl,lokale krant,Gelderland,Gelderse Vallei,Barneveld,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/barneveldse-krant
+bdu_de_nieuwsbode,De Nieuwsbode,De Nieuwsbode,https://www.denieuwsbode.nl,denieuwsbode.nl,lokale krant,Utrecht,Utrechtse Heuvelrug en Zeist,Zeist,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/de-nieuwsbode
+bdu_de_stad_amersfoort,De Stad Amersfoort,De Stad Amersfoort,https://www.destadamersfoort.nl,destadamersfoort.nl,lokale krant,Utrecht,Eemland,Amersfoort,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/de-stad-amersfoort
+bdu_het_kompas_hardinxveld_giessendam,Het Kompas Hardinxveld-Giessendam,Het Kompas Hardinxveld-Giessendam,https://www.hetkompashardinxveld-giessendam.nl/,hetkompashardinxveld-giessendam.nl,lokale krant,Zuid-Holland,Alblasserwaard,Hardinxveld-Giessendam,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/het-kompas-hardinxveld-giessendam
+bdu_ede_stad,Ede Stad,Ede Stad,https://edestad.nl,edestad.nl,lokale krant,Gelderland,Gelderse Vallei,Ede,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/ede-stad
+bdu_de_rijnpost,De Rijnpost,De Rijnpost,https://derijnpost.nl,derijnpost.nl,lokale krant,Utrecht,Gelderse Vallei,Veenendaal,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/de-rijnpost
+bdu_de_stad_gorinchem,De Stad Gorinchem,De Stad Gorinchem,https://www.destadgorinchem.nl/,destadgorinchem.nl,lokale krant,Zuid-Holland,Alblasserwaard,Gorinchem,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/de-stad-gorinchem
+bdu_harderwijker_courant,Harderwijker Courant,Harderwijker Courant,https://www.harderwijkercourant.nl/,harderwijkercourant.nl,lokale krant,Gelderland,Veluwe,Harderwijk,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/harderwijker-courant
+bdu_de_woudenberger,De Woudenberger,De Woudenberger,https://www.dewoudenberger.nl,dewoudenberger.nl,lokale krant,Utrecht,Gelderse Vallei,Woudenberg,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/de-woudenberger
+bdu_ermelos_weekblad,Ermelo's Weekblad,Ermelo's Weekblad,https://ermelosweekblad.nl,ermelosweekblad.nl,lokale krant,Gelderland,Veluwe,Ermelo,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/ermelos-weekblad
+bdu_nieuwsblad_de_kaap,Nieuwsblad De Kaap,Nieuwsblad De Kaap,https://www.nieuwsbladdekaap.nl,nieuwsbladdekaap.nl,lokale krant,Utrecht,Utrechtse Heuvelrug,Doorn,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/nieuwsblad-de-kaap
+bdu_recreatiekrant_veluwe,Recreatiekrant Veluwe,Recreatiekrant Veluwe,https://www.recreatiekrantveluwe.nl,recreatiekrantveluwe.nl,lokale krant,Gelderland,Veluwe,,recreatie en toerisme,,normaal,https://bdumedia.nl/nieuwsmerk/recreatiekrant-veluwe
+bdu_regiosport_veenendaal,Regiosport Veenendaal,Regiosport Veenendaal,https://www.regiosportveenendaal.nl,regiosportveenendaal.nl,lokale krant,Utrecht,Gelderse Vallei,Veenendaal,sport,,normaal,https://bdumedia.nl/nieuwsmerk/regiosport-veenendaal
+bdu_het_kompas_sliedrecht,Het Kompas Sliedrecht,Het Kompas Sliedrecht,https://www.hetkompassliedrecht.nl/,hetkompassliedrecht.nl,lokale krant,Zuid-Holland,Alblasserwaard,Sliedrecht,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/het-kompas-sliedrecht
+bdu_houtens_nieuws,Houtens Nieuws,Houtens Nieuws,https://www.houtensnieuws.nl,houtensnieuws.nl,lokale krant,Utrecht,Kromme Rijnstreek,Houten,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/houtens-nieuws
+bdu_leusder_krant,Leusder Krant,Leusder Krant,https://www.leusderkrant.nl,leusderkrant.nl,lokale krant,Utrecht,Eemland,Leusden,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/leusder-krant
+bdu_rijn_en_veluwe,Rijn en Veluwe,Rijn en Veluwe,https://www.rijnenveluwe.nl/,rijnenveluwe.nl,lokale krant,Gelderland,Zuidwest-Veluwe,,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/rijn-en-veluwe
+bdu_stad_wageningen,Stad Wageningen,Stad Wageningen,https://stadwageningen.nl,stadwageningen.nl,lokale krant,Gelderland,Gelderse Vallei,Wageningen,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/stad-wageningen
+bdu_soester_courant,Soester Courant,Soester Courant,https://www.soestercourant.nl,soestercourant.nl,lokale krant,Utrecht,Eemland,Soest,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/soester-courant
+bdu_scherpenzeelse_krant,Scherpenzeelse Krant,Scherpenzeelse Krant,https://www.scherpenzeelsekrant.nl,scherpenzeelsekrant.nl,lokale krant,Gelderland,Gelderse Vallei,Scherpenzeel,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/scherpenzeelse-krant
+bdu_stad_nijkerk_nl,De Stad Nijkerk,De Stad Nijkerk,https://www.destadnijkerk.nl,destadnijkerk.nl,lokale krant,Gelderland,Gelderse Vallei,Nijkerk,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/stad-nijkerk-nl
+bdu_vierklank,Vierklank,Vierklank,https://www.vierklank.nl,vierklank.nl,lokale krant,Utrecht,De Bilt,De Bilt,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/vierklank
+bdu_wijks_nieuws,Wijks Nieuws,Wijks Nieuws,https://www.wijksnieuws.nl,wijksnieuws.nl,lokale krant,Utrecht,Kromme Rijnstreek,Wijk bij Duurstede,algemeen nieuws,,normaal,https://bdumedia.nl/nieuwsmerk/wijks-nieuws
+rodi_alkmaar,Rodi Alkmaar,Rodi Alkmaar,https://www.rodi.nl/alkmaar/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Noord-Kennemerland,Alkmaar,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_alphen_aan_den_rijn,Rodi Alphen aan den Rijn,Rodi Alphen aan den Rijn,https://www.rodi.nl/alphenaandenrijn/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Groene Hart,Alphen aan den Rijn,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_amsterdam_nieuw_west,Rodi Amsterdam Nieuw-West,Rodi Amsterdam Nieuw-West,https://www.rodi.nl/amsterdam-nieuw-west/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Amsterdam Nieuw-West,Amsterdam,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_amsterdam_noord,Rodi Amsterdam-Noord,Rodi Amsterdam-Noord,https://www.rodi.nl/amsterdam-noord/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Amsterdam-Noord,Amsterdam,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_bergen,Rodi Bergen,Rodi Bergen,https://www.rodi.nl/bergen/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Noord-Kennemerland,Bergen,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_beverwijk,Rodi Beverwijk,Rodi Beverwijk,https://www.rodi.nl/beverwijk/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,IJmond,Beverwijk,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_castricum,Rodi Castricum,Rodi Castricum,https://www.rodi.nl/castricum/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Noord-Kennemerland,Castricum,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_den_haag,Rodi Den Haag,Rodi Den Haag,https://www.rodi.nl/denhaag/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Haaglanden,Den Haag,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_den_helder,Rodi Den Helder,Rodi Den Helder,https://www.rodi.nl/denhelder/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Kop van Noord-Holland,Den Helder,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_dijk_en_waard,Rodi Dijk en Waard,Rodi Dijk en Waard,https://www.rodi.nl/dijkenwaard/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Noord-Kennemerland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_drechterland,Rodi Drechterland,Rodi Drechterland,https://www.rodi.nl/drechterland/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,West-Friesland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_edam_volendam,Rodi Edam - Volendam,Rodi Edam - Volendam,https://www.rodi.nl/edam-volendam/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Waterland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_enkhuizen,Rodi Enkhuizen,Rodi Enkhuizen,https://www.rodi.nl/enkhuizen/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,West-Friesland,Enkhuizen,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_haarlem,Rodi Haarlem,Rodi Haarlem,https://www.rodi.nl/haarlem/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Zuid-Kennemerland,Haarlem,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_haarlemmermeer,Rodi Haarlemmermeer,Rodi Haarlemmermeer,https://www.rodi.nl/haarlemmermeer/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Groot-Amsterdam,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_heemskerk,Rodi Heemskerk,Rodi Heemskerk,https://www.rodi.nl/heemskerk/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,IJmond,Heemskerk,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_heiloo,Rodi Heiloo,Rodi Heiloo,https://www.rodi.nl/heiloo/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Noord-Kennemerland,Heiloo,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_hoek_van_holland,Rodi Hoek van Holland,Rodi Hoek van Holland,https://www.rodi.nl/hoekvanholland/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Rotterdam-Rijnmond,Hoek van Holland,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_hollands_kroon,Rodi Hollands Kroon,Rodi Hollands Kroon,https://www.rodi.nl/hollandskroon/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Kop van Noord-Holland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_hoorn,Rodi Hoorn,Rodi Hoorn,https://www.rodi.nl/hoorn/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,West-Friesland,Hoorn,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_kaag_en_braassem,Rodi Kaag en Braassem,Rodi Kaag en Braassem,https://www.rodi.nl/kaagenbraassem/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Groene Hart,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_koggenland,Rodi Koggenland,Rodi Koggenland,https://www.rodi.nl/koggenland/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,West-Friesland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_landsmeer,Rodi Landsmeer,Rodi Landsmeer,https://www.rodi.nl/landsmeer/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Waterland,Landsmeer,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_maassluis,Rodi Maassluis,Rodi Maassluis,https://www.rodi.nl/maassluis/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Rotterdam-Rijnmond,Maassluis,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_medemblik,Rodi Medemblik,Rodi Medemblik,https://www.rodi.nl/medemblik/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,West-Friesland,Medemblik,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_midden_delfland,Rodi Midden-Delfland,Rodi Midden-Delfland,https://www.rodi.nl/midden-delfland/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Haaglanden,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_nieuwkoop,Rodi Nieuwkoop,Rodi Nieuwkoop,https://www.rodi.nl/nieuwkoop/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Groene Hart,Nieuwkoop,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_oostzaan,Rodi Oostzaan,Rodi Oostzaan,https://www.rodi.nl/oostzaan/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Zaanstreek,Oostzaan,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_opmeer,Rodi Opmeer,Rodi Opmeer,https://www.rodi.nl/opmeer/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,West-Friesland,Opmeer,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_purmerend,Rodi Purmerend,Rodi Purmerend,https://www.rodi.nl/purmerend/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Waterland,Purmerend,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_rijswijk,Rodi Rijswijk,Rodi Rijswijk,https://www.rodi.nl/rijswijk/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Haaglanden,Rijswijk,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_rozenburg,Rodi Rozenburg,Rodi Rozenburg,https://www.rodi.nl/rozenburg/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Rotterdam-Rijnmond,Rozenburg,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_schagen,Rodi Schagen,Rodi Schagen,https://www.rodi.nl/schagen/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Kop van Noord-Holland,Schagen,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_schiedam,Rodi Schiedam,Rodi Schiedam,https://www.rodi.nl/schiedam/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Rotterdam-Rijnmond,Schiedam,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_stede_broec,Rodi Stede Broec,Rodi Stede Broec,https://www.rodi.nl/stedebroec/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,West-Friesland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_uitgeest,Rodi Uitgeest,Rodi Uitgeest,https://www.rodi.nl/uitgeest/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,IJmond,Uitgeest,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_vlaardingen,Rodi Vlaardingen,Rodi Vlaardingen,https://www.rodi.nl/vlaardingen/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Rotterdam-Rijnmond,Vlaardingen,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_waterland,Rodi Waterland,Rodi Waterland,https://www.rodi.nl/waterland/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Waterland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_westland,Rodi Westland,Rodi Westland,https://www.rodi.nl/westland/nieuws/insturen,rodi.nl,lokale krant,Zuid-Holland,Westland,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_wormerland,Rodi Wormerland,Rodi Wormerland,https://www.rodi.nl/wormerland/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Zaanstreek,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rodi_zaanstad,Rodi Zaanstad,Rodi Zaanstad,https://www.rodi.nl/zaanstad/nieuws/insturen,rodi.nl,lokale krant,Noord-Holland,Zaanstreek,,algemeen nieuws,,normaal,https://www.rodimedia.nl/merken/huis-aan-huis-bladen/
+rpo_rtv_noord,RTV Noord,RTV Noord,http://www.rtvnoord.nl/,rtvnoord.nl,regionale publieke omroep,Groningen,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_omrop_fryslan,Omrop Fryslân,Omrop Fryslân,http://www.omropfryslan.nl/,omropfryslan.nl,regionale publieke omroep,Friesland,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_rtv_drenthe,RTV Drenthe,RTV Drenthe,http://www.rtvdrenthe.nl/,rtvdrenthe.nl,regionale publieke omroep,Drenthe,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_nh_nieuws,NH Nieuws,NH Nieuws,http://www.nhnieuws.nl/,nhnieuws.nl,regionale publieke omroep,Noord-Holland,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_omroep_flevoland,Omroep Flevoland,Omroep Flevoland,http://www.omroepflevoland.nl/,omroepflevoland.nl,regionale publieke omroep,Flevoland,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_rtv_oost,RTV Oost,RTV Oost,http://www.rtvoost.nl/,rtvoost.nl,regionale publieke omroep,Overijssel,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_rtv_utrecht,RTV Utrecht,RTV Utrecht,http://www.rtvutrecht.nl/,rtvutrecht.nl,regionale publieke omroep,Utrecht,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_omroep_gelderland,Omroep Gelderland,Omroep Gelderland,http://www.omroepgelderland.nl/,omroepgelderland.nl,regionale publieke omroep,Gelderland,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_omroep_west,Omroep West,Omroep West,http://www.omroepwest.nl/,omroepwest.nl,regionale publieke omroep,Zuid-Holland,Haaglanden en noordelijk Zuid-Holland,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_omroep_zeeland,Omroep Zeeland,Omroep Zeeland,http://www.omroepzeeland.nl/,omroepzeeland.nl,regionale publieke omroep,Zeeland,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_rijnmond,Rijnmond,Rijnmond,http://www.rijnmond.nl/,rijnmond.nl,regionale publieke omroep,Zuid-Holland,Rotterdam-Rijnmond,Rotterdam,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+rpo_omroep_brabant,Omroep Brabant,Omroep Brabant,https://www.omroepbrabant.nl/,omroepbrabant.nl,regionale publieke omroep,Noord-Brabant,Provinciebreed,,algemeen nieuws,,normaal,https://www.stichtingrpo.nl/omroepen/
+ndp_reformatorisch_dagblad,Reformatorisch Dagblad,Reformatorisch Dagblad,https://www.rd.nl,rd.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_het_financieele_dagblad,Het Financieele Dagblad,Het Financieele Dagblad,https://fd.nl/,fd.nl,landelijk of regionaal nieuws,,Landelijk,,economie en ondernemen,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_bnr_nieuwsradio,BNR Nieuwsradio,BNR Nieuwsradio,https://www.bnr.nl/,bnr.nl,landelijk of regionaal nieuws,,Landelijk,,economie en ondernemen,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_de_groene_amsterdammer,De Groene Amsterdammer,De Groene Amsterdammer,https://www.groene.nl/,groene.nl,landelijk of regionaal nieuws,,Landelijk,,opinie en achtergrond,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_ad,AD,AD,https://www.ad.nl/,ad.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_het_parool,Het Parool,Het Parool,https://www.parool.nl/,parool.nl,landelijk of regionaal nieuws,Noord-Holland,Amsterdam,Amsterdam,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_trouw,Trouw,Trouw,https://www.trouw.nl/,trouw.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_de_volkskrant,de Volkskrant,de Volkskrant,https://www.volkskrant.nl/,volkskrant.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_bn_destem,BN DeStem,BN DeStem,https://www.bndestem.nl/,bndestem.nl,landelijk of regionaal nieuws,Noord-Brabant,West-Brabant en Zeeland,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_brabants_dagblad,Brabants Dagblad,Brabants Dagblad,https://www.bd.nl/,bd.nl,landelijk of regionaal nieuws,Noord-Brabant,Midden- en Noordoost-Brabant,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_eindhovens_dagblad,Eindhovens Dagblad,Eindhovens Dagblad,https://www.ed.nl/,ed.nl,landelijk of regionaal nieuws,Noord-Brabant,Zuidoost-Brabant,Eindhoven,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_de_gelderlander,de Gelderlander,de Gelderlander,https://www.gelderlander.nl/,gelderlander.nl,landelijk of regionaal nieuws,Gelderland,Gelderland en Rijk van Nijmegen,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_pzc,PZC,PZC,https://www.pzc.nl/,pzc.nl,landelijk of regionaal nieuws,Zeeland,Provinciebreed,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_de_stentor,de Stentor,de Stentor,https://www.destentor.nl/,destentor.nl,landelijk of regionaal nieuws,Overijssel,Overijssel en noordelijk Gelderland,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_tubantia,Tubantia,Tubantia,https://www.tubantia.nl/,tubantia.nl,landelijk of regionaal nieuws,Overijssel,Twente en Achterhoek,Enschede,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_nu_nl,NU.nl,NU.nl,https://www.nu.nl/,nu.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_de_telegraaf,De Telegraaf,De Telegraaf,https://www.telegraaf.nl/,telegraaf.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_de_gooi_en_eemlander,De Gooi- en Eemlander,De Gooi- en Eemlander,https://www.gooieneemlander.nl/,gooieneemlander.nl,landelijk of regionaal nieuws,Noord-Holland,Gooi en Vechtstreek,Hilversum,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_haarlems_dagblad,Haarlems Dagblad,Haarlems Dagblad,https://www.haarlemsdagblad.nl/,haarlemsdagblad.nl,landelijk of regionaal nieuws,Noord-Holland,Zuid-Kennemerland,Haarlem,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_noordhollands_dagblad,Noordhollands Dagblad,Noordhollands Dagblad,https://www.noordhollandsdagblad.nl/,noordhollandsdagblad.nl,landelijk of regionaal nieuws,Noord-Holland,Provinciebreed,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_leidsch_dagblad,Leidsch Dagblad,Leidsch Dagblad,https://www.leidschdagblad.nl/,leidschdagblad.nl,landelijk of regionaal nieuws,Zuid-Holland,Leiden en omstreken,Leiden,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_ijmuider_courant,IJmuider Courant,IJmuider Courant,https://www.ijmuidercourant.nl/,ijmuidercourant.nl,landelijk of regionaal nieuws,Noord-Holland,IJmond,IJmuiden,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_friesch_dagblad,Friesch Dagblad,Friesch Dagblad,https://www.frieschdagblad.nl/,frieschdagblad.nl,landelijk of regionaal nieuws,Friesland,Provinciebreed,Leeuwarden,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_leeuwarder_courant,Leeuwarder Courant,Leeuwarder Courant,https://www.lc.nl/,lc.nl,landelijk of regionaal nieuws,Friesland,Provinciebreed,Leeuwarden,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_dagblad_van_het_noorden,Dagblad van het Noorden,Dagblad van het Noorden,https://www.dvhn.nl/,dvhn.nl,landelijk of regionaal nieuws,,Noord-Nederland,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_nrc,NRC,NRC,https://www.nrc.nl/,nrc.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_nederlands_dagblad,Nederlands Dagblad,Nederlands Dagblad,https://www.nd.nl/,nd.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_ew,EW,EW,https://www.ewmagazine.nl/,ewmagazine.nl,landelijk of regionaal nieuws,,Landelijk,,opinie en achtergrond,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_editie_nl,Editie NL,Editie NL,https://www.rtlnieuws.nl/editienl,rtlnieuws.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_rtl_nieuws,RTL Nieuws,RTL Nieuws,https://www.rtlnieuws.nl/,rtlnieuws.nl,landelijk of regionaal nieuws,,Landelijk,,algemeen nieuws,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_rtl_z,RTL Z,RTL Z,https://www.rtlz.nl/,rtlz.nl,landelijk of regionaal nieuws,,Landelijk,,economie en ondernemen,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+ndp_vrij_nederland,Vrij Nederland,Vrij Nederland,https://www.vn.nl/,vn.nl,landelijk of regionaal nieuws,,Landelijk,,opinie en achtergrond,,normaal,https://www.ndpnieuwsmedia.nl/nieuwsbedrijven/
+navenant,Navenant,Navenant,https://navenant.nl/,navenant.nl,regionaal tijdschrift,Limburg,Provinciebreed en Euregio,,"lifestyle, culinair en reizen",navenant|hoofdredacteur|redactie,hoog,https://navenant.nl/
+navenant,Navenant,Navenant,https://navenant.nl/contact/,navenant.nl,regionaal tijdschrift,Limburg,Provinciebreed en Euregio,,"lifestyle, culinair en reizen",navenant|hoofdredacteur|redactie,hoog,https://navenant.nl/
+nummer_1,Nummer 1,Nummer 1,https://www.nummer1.nl/colofon/,nummer1.nl,regionaal tijdschrift,Limburg,Provinciebreed,,"familie, lifestyle en wonen",nummer 1|hoofdredacteur|redactie,hoog,https://www.nummer1.nl/colofon/
+noord_limburg_business,Noord-Limburg Business,Noord-Limburg Business,https://www.noordlimburgbusiness.nl/,noordlimburgbusiness.nl,regionaal zakelijk tijdschrift,Limburg,Noord-Limburg,,economie en ondernemen,noord-limburg business|hoofdredacteur|redactie,hoog,https://www.noordlimburgbusiness.nl/
+noord_limburg_business,Noord-Limburg Business,Noord-Limburg Business,https://www.noordlimburgbusiness.nl/redactie/,noordlimburgbusiness.nl,regionaal zakelijk tijdschrift,Limburg,Noord-Limburg,,economie en ondernemen,noord-limburg business|hoofdredacteur|redactie,hoog,https://www.noordlimburgbusiness.nl/
+lifestyle_in_limburg,Lifestyle in Limburg,Lifestyle in Limburg,https://www.lifestyleinlimburg.nl/,lifestyleinlimburg.nl,regionaal tijdschrift,Limburg,Zuid-Limburg,,lifestyle en wonen,lifestyle in limburg|redactie,hoog,https://www.lifestyleinlimburg.nl/
+mijnstreek_magazine,MijnStreek Magazine,MijnStreek,https://www.landvanherle.nl/mijnstreek-magazine/,landvanherle.nl,regionaal historisch tijdschrift,Limburg,Parkstad,,geschiedenis en cultuur,mijnstreek|land van herle|hoofdredacteur|redactie,hoog,https://www.landvanherle.nl/mijnstreek-magazine/
+limburgworks,LimburgWORKS,LimburgWORKS magazine,https://limburgworks.eu/magazines/,limburgworks.eu,regionaal zakelijk tijdschrift,Limburg,Limburg en Euregio,,economie en ondernemen,limburgworks|redactie|content,hoog,https://limburgworks.eu/magazines/
+limburgworks,LimburgWORKS,LimburgWORKS magazine,https://limburgworks.eu/contact/,limburgworks.eu,regionaal zakelijk tijdschrift,Limburg,Limburg en Euregio,,economie en ondernemen,limburgworks|redactie|content,hoog,https://limburgworks.eu/magazines/
+bruis_magazine,(B)RUIS Magazine,(B)RUIS,https://www.bruismagazine.nl/,bruismagazine.nl,lokaal tijdschrift,Limburg,Parkstad,Heerlen,"stad, lifestyle en ondernemen",bruis|redactie|content,hoog,https://www.bruismagazine.nl/
+bruis_magazine,(B)RUIS Magazine,(B)RUIS,https://www.bruismagazine.nl/contact/,bruismagazine.nl,lokaal tijdschrift,Limburg,Parkstad,Heerlen,"stad, lifestyle en ondernemen",bruis|redactie|content,hoog,https://www.bruismagazine.nl/
+maastricht_magazine,Maastricht Magazine,Maastricht Magazine / M+MAG,https://maastrichtmagazine.com/contact-us/,maastrichtmagazine.com,lokaal online tijdschrift,Limburg,Zuid-Limburg,Maastricht,"lifestyle, culinair, kunst en reizen",maastricht magazine|editorial|redactie,hoog,https://maastrichtmagazine.com/contact-us/
+hallo_magazine,HALLO Magazine,HALLO Magazine,https://aqua-media.nl/redactie-en-verkoop/,aqua-media.nl,regionaal tijdschrift,Limburg,Midden-Limburg,,lokaal nieuws en lifestyle,hallo magazine|redactie,hoog,https://aqua-media.nl/redactie-en-verkoop/
+hallo_magazine,HALLO Magazine,HALLO Magazine,https://aqua-media.nl/contact/,aqua-media.nl,regionaal tijdschrift,Limburg,Midden-Limburg,,lokaal nieuws en lifestyle,hallo magazine|redactie,hoog,https://aqua-media.nl/redactie-en-verkoop/
+zout_magazine,ZOUT Magazine,ZOUT Magazine,https://www.zoutmagazine.eu/contact/,zoutmagazine.eu,regionaal cultureel tijdschrift,Limburg,Zuid-Limburg en Euregio,Maastricht,kunst en cultuur,zout|hoofdredacteur|eindredacteur|redactie,hoog,https://www.zoutmagazine.eu/contact/
+spiegel_van_roermond,Spiegel van Roermond,Spiegel van Roermond,https://www.rura.nl/over-rura/contact/,rura.nl,lokaal historisch tijdschrift,Limburg,Midden-Limburg,Roermond,geschiedenis en cultuur,spiegel van roermond|redactie,hoog,https://www.rura.nl/over-rura/contact/
+hobbyzine_plus,Hobbyzine Plus,Hobbyzine Plus,https://hobbyzine.nl/,hobbyzine.nl,landelijk creatief tijdschrift,,Landelijk,,papier en kaarten maken,hobbyzine|redactie|content,hoog,https://hobbyzine.nl/
+hobbyzine_plus,Hobbyzine Plus,Hobbyzine Plus,https://hobbyzine.nl/contact/,hobbyzine.nl,landelijk creatief tijdschrift,,Landelijk,,papier en kaarten maken,hobbyzine|redactie|content,hoog,https://hobbyzine.nl/
+meiden_crea_doeboek,MEIDEN en Crea Doeboek,MEIDEN | MEIDEN Crea Doeboek,https://meidenmagazine.nl/,meidenmagazine.nl,landelijk jeugd- en creatief tijdschrift,,Landelijk,,"meiden, creatief en DIY",meiden|crea doeboek|redactie,hoog,https://meidenmagazine.nl/contact/
+meiden_crea_doeboek,MEIDEN en Crea Doeboek,MEIDEN | MEIDEN Crea Doeboek,https://meidenmagazine.nl/contact/,meidenmagazine.nl,landelijk jeugd- en creatief tijdschrift,,Landelijk,,"meiden, creatief en DIY",meiden|crea doeboek|redactie,hoog,https://meidenmagazine.nl/contact/
+handwerken_zonder_grenzen,Handwerken Zonder Grenzen,Handwerken Zonder Grenzen,https://www.handwerkenzondergrenzen.nl/contact/,handwerkenzondergrenzen.nl,landelijk creatief tijdschrift,,Landelijk,,textiel en handwerken,handwerken zonder grenzen|hoofdredacteur|redactie,hoog,https://www.handwerkenzondergrenzen.nl/contact/
+flow_magazine,Flow Magazine,Flow Magazine,https://www.flowmagazine.com/contact/,flowmagazine.com,landelijk lifestyle- en creatief tijdschrift,,Landelijk,,"creatief, papier en slow living",flow|hoofdredacteur|redactie,hoog,https://www.flowmagazine.com/contact/
+daphnes_diary,Daphne's Diary,Daphne's Diary,https://www.daphnesdiary.com/contact,daphnesdiary.com,landelijk lifestyle- en creatief tijdschrift,,Landelijk,,"creatief, papier, wonen en lifestyle",daphne|creative submissions|editorial|redactie,hoog,https://www.daphnesdiary.com/contact
+aan_de_haak,Aan de Haak,Aan de Haak,https://scalacrossmedia.nl/merk/aan-de-haak/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,haken en amigurumi,aan de haak|haakpatronen|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/aan-de-haak/
+aan_de_haak,Aan de Haak,Aan de Haak,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,haken en amigurumi,aan de haak|haakpatronen|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/aan-de-haak/
+amigurumi_magazine,Amigurumi Magazine,Amigurumi Magazine,https://scalacrossmedia.nl/merk/amigurumi/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,haken en amigurumi,amigurumi|aan de haak|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/amigurumi/
+amigurumi_magazine,Amigurumi Magazine,Amigurumi Magazine,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,haken en amigurumi,amigurumi|aan de haak|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/amigurumi/
+breimagazine,Breimagazine,Breimagazine,https://scalacrossmedia.nl/merk/breimagazine/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,breien,breimagazine|breiprojecten|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/breimagazine/
+breimagazine,Breimagazine,Breimagazine,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,breien,breimagazine|breiprojecten|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/breimagazine/
+fun_crochet_magazine,Fun Crochet Magazine,Fun Crochet Magazine,https://scalacrossmedia.nl/merk/fun-crochet-magazine/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,haken en amigurumi,fun crochet|fun amigurumi|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/fun-crochet-magazine/
+fun_crochet_magazine,Fun Crochet Magazine,Fun Crochet Magazine,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,haken en amigurumi,fun crochet|fun amigurumi|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/fun-crochet-magazine/
+hobbyhandig,HobbyHandig,HobbyHandig,https://scalacrossmedia.nl/merk/hobby-handig/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,"creatief, papier en DIY",hobbyhandig|creatieve merken|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/hobby-handig/
+hobbyhandig,HobbyHandig,HobbyHandig,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,"creatief, papier en DIY",hobbyhandig|creatieve merken|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/hobby-handig/
+mijn_hobbykaart_xl,Mijn Hobbykaart XL,Mijn Hobbykaart XL,https://scalacrossmedia.nl/merk/mijn-hobbykaart-xl/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,papier en kaarten maken,mijn hobbykaart|hobbykaart|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/mijn-hobbykaart-xl/
+mijn_hobbykaart_xl,Mijn Hobbykaart XL,Mijn Hobbykaart XL,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,papier en kaarten maken,mijn hobbykaart|hobbykaart|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/mijn-hobbykaart-xl/
+special_bloemschikken,Special Bloemschikken,Special Bloemschikken,https://scalacrossmedia.nl/merk/special-bloemschikken/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,bloemschikken,special bloemschikken|bloemschikken|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/special-bloemschikken/
+special_bloemschikken,Special Bloemschikken,Special Bloemschikken,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,bloemschikken,special bloemschikken|bloemschikken|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/special-bloemschikken/
+stitch_quilt,Stitch & Quilt,Stitch & Quilt,https://scalacrossmedia.nl/merk/stitch-en-quilt/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,"textiel, quilten en naaien",stitch & quilt|stitch en quilt|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/stitch-en-quilt/
+stitch_quilt,Stitch & Quilt,Stitch & Quilt,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,"textiel, quilten en naaien",stitch & quilt|stitch en quilt|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/stitch-en-quilt/
+textiel_plus,Textiel Plus,Textiel Plus,https://scalacrossmedia.nl/merk/txp/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,textielkunst en handwerken,textiel plus|textielkunst|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/txp/
+textiel_plus,Textiel Plus,Textiel Plus,https://scalacrossmedia.nl/over-ons/,scalacrossmedia.nl,landelijk creatief tijdschrift,,Landelijk,,textielkunst en handwerken,textiel plus|textielkunst|chief content|chief editor|alle creatieve merken,hoog,https://scalacrossmedia.nl/merk/txp/
