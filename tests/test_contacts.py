@@ -47,6 +47,15 @@ class ContactTests(unittest.TestCase):
         self.assertEqual([c.email for c in found], ["redactie@krant.nl"])
         self.assertEqual(found[0].method, "tekst_at_dot")
 
+    def test_cloudflare_protected_public_address(self):
+        email = "redactie@krant.nl"
+        key = 0x23
+        encoded = f"{key:02x}" + "".join(f"{ord(char) ^ key:02x}" for char in email)
+        found = self.extract(
+            f'<p>Redactie <a href="/cdn-cgi/l/email-protection" data-cfemail="{encoded}">verborgen</a></p>'
+        )
+        self.assertEqual([(contact.email, contact.method) for contact in found], [(email, "cloudflare_email")])
+
     def test_classification_uses_local_part_and_nearby_context(self):
         self.assertEqual(classify("info@nieuwsmedia.example"), ("algemeen", 35))
         self.assertEqual(classify("jaspers@press.example"), ("overslaan", 0))

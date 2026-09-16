@@ -97,6 +97,17 @@ def text_contacts(text: str, method: str):
             yield Contact(email, "tekst_at_dot", text[max(0, match.start() - 150):match.end() + 150])
 
 
+def decode_cloudflare_email(value: str) -> str:
+    """Decode Cloudflare's documented email-protection payload."""
+    try:
+        raw = bytes.fromhex(value)
+    except ValueError:
+        return ""
+    if len(raw) < 2:
+        return ""
+    return "".join(chr(byte ^ raw[0]) for byte in raw[1:])
+
+
 def json_contacts(value):
     if isinstance(value, dict):
         context = " ".join(str(value.get(key, "")) for key in ("@type", "jobTitle", "contactType", "department"))
@@ -114,7 +125,7 @@ def json_contacts(value):
 
 
 def extract_contacts(soup: BeautifulSoup):
-    """Only visible text, mailto recipients and email fields in JSON-LD."""
+    """Read explicit public addresses from supported page representations."""
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             yield from json_contacts(json.loads(script.string or script.get_text()))
@@ -126,6 +137,11 @@ def extract_contacts(soup: BeautifulSoup):
         node.decompose()
     for comment in visible.find_all(string=lambda text: isinstance(text, Comment)):
         comment.extract()
+    for node in visible.select("[data-cfemail]"):
+        email = valid_email(decode_cloudflare_email(node.get("data-cfemail", "")))
+        if email:
+            context = node.parent.get_text(" ", strip=True)
+            yield Contact(email, "cloudflare_email", context if len(context) <= 400 else node.get_text(" ", strip=True))
     for anchor in visible.find_all("a", href=True):
         href = anchor["href"]
         if href.lower().startswith("mailto:"):
