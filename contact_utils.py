@@ -166,10 +166,12 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
         "privacy", "noreply", "webmaster", "abuse", "sales", "jobs", "hr", "dpo", "support",
         "copyright", "hergebruik", "familieberichten", "traffic", "taal", "carriere", "ombudsman",
         "lezers", "brieven", "webcare", "service", "shop", "verkoop", "voornaam", "voorbeeld", "test",
-        "finance", "administratie", "abonnementen",
+        "finance", "administratie", "abonnementen", "webshop", "webwinkel", "bestellen", "orders",
+        "klachten", "reclame", "advertising", "billing", "factuur", "facturen", "pbo",
     }
     if words & excluded or local.startswith((
-        "no-reply", "klantenservice", "customer", "advertentie", "adverteren", "vacature", "abonnement",
+        "no-reply", "klantenservice", "customer", "advertentie", "adverteren", "advertising", "reclame",
+        "vacature", "abonnement", "webshop", "webwinkel", "bestellen",
     )):
         return "overslaan", 0
     editorial_role = re.search(
@@ -179,7 +181,8 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
     )
     non_editorial_role = re.search(
         r"\b(?:finance|sales|account manager|customer relations|office manager|webshop manager|"
-        r"graphic designer|vormgeving|administratie|abonnementen|marketing co(?:o|ö)rdinator|"
+        r"graphic designer|vormgeving|administratie|abonnementen|advertentie|adverteren|advertising|reclame|"
+        r"marketing co(?:o|ö)rdinator|"
         r"chief executive officer|chief operations officer|\bceo\b|\bcoo\b)\b",
         context, re.I,
     )

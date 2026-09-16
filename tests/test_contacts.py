@@ -62,6 +62,9 @@ class ContactTests(unittest.TestCase):
         self.assertEqual(classify("redactie@krant.example", "Klantenservice in footer"), ("redactie", 95))
         self.assertEqual(classify("hr@krant.example")[1], 0)
         self.assertEqual(classify("klantenservice@krant.example", "redactie")[1], 0)
+        self.assertEqual(classify("webshop@magazine.example", "Contact")[1], 0)
+        self.assertEqual(classify("advertising@magazine.example", "Contact")[1], 0)
+        self.assertEqual(classify("naam@magazine.example", "Contact voor adverteren")[1], 0)
 
     def test_editorial_topic_and_shared_publisher_matching(self):
         self.assertEqual(editorial_topic("sport@krant.example", "", "algemeen nieuws", "deelredactie"), "sport")
