@@ -172,6 +172,8 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
         "lezers", "brieven", "webcare", "service", "shop", "verkoop", "voornaam", "voorbeeld", "test",
         "finance", "administratie", "abonnementen", "webshop", "webwinkel", "bestellen", "orders",
         "klachten", "reclame", "advertising", "billing", "factuur", "facturen", "pbo",
+        "marketing", "events", "event", "operations", "leden", "members", "bezorging",
+        "verspreiding", "crediteuren", "debiteuren", "bestuur", "directie", "stage", "techniek",
     }
     if words & excluded or local.startswith((
         "no-reply", "klantenservice", "customer", "advertentie", "adverteren", "advertising", "reclame",
@@ -192,8 +194,12 @@ def classify(email: str, context: str = "") -> tuple[str, int]:
     )
     if non_editorial_role and not editorial_role:
         return "overslaan", 0
-    if local.startswith(("redactie", "editorial", "newsdesk", "newsroom")) or words & {"nieuws", "news", "editor"}:
+    if local.startswith(("hoofdredactie", "eindredactie", "redactie", "editorial", "newsdesk", "newsroom", "redsec", "chefnieuws")) or words & {"nieuws", "news", "editor"}:
         return "redactie", 95
+    if local.startswith(("persbericht", "persberichten")):
+        return "pers", 85
+    if local.startswith(("opinieredactie", "sportredactie", "fotoredactie", "webredactie")):
+        return "deelredactie", 80
     if local.startswith(("nieuwstip", "tipderedactie")) or words & {"tip", "tips"}:
         return "nieuwstip", 90
     if local.startswith(("persvoorlichting", "perscontact")) or words & {"pers", "press", "media"}:

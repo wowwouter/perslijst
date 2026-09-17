@@ -64,6 +64,10 @@ class ContactTests(unittest.TestCase):
         self.assertEqual(classify("klantenservice@krant.example", "redactie")[1], 0)
         self.assertEqual(classify("webshop@magazine.example", "Contact")[1], 0)
         self.assertEqual(classify("advertising@magazine.example", "Contact")[1], 0)
+        self.assertEqual(classify("marketing@magazine.example", "Contact")[1], 0)
+        self.assertEqual(classify("bezorging@krant.example", "Contact")[1], 0)
+        self.assertEqual(classify("hoofdredactie@krant.example", "Contact"), ("redactie", 95))
+        self.assertEqual(classify("persberichten@krant.example", "Contact"), ("pers", 85))
         self.assertEqual(classify("naam@magazine.example", "Contact voor adverteren")[1], 0)
 
     def test_placeholder_addresses_are_not_extracted(self):
