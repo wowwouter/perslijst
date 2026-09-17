@@ -79,6 +79,10 @@ def valid_email(value: str) -> str:
     if not EMAIL_RE.fullmatch(value) or len(value) > 254:
         return ""
     local, domain = value.rsplit("@", 1)
+    placeholder_locals = {"naam", "uwnaam", "jouwnaam", "email", "e-mail", "emailadres", "mailadres"}
+    placeholder_domains = {"example.com", "example.org", "example.net", "voorbeeld.nl"}
+    if local in placeholder_locals or domain in placeholder_domains:
+        return ""
     if len(local) > 64 or local.startswith(".") or local.endswith(".") or ".." in value:
         return ""
     if domain.endswith(ASSET_SUFFIXES) or not all(re.fullmatch(r"[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", part) for part in domain.split(".")):

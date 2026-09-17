@@ -66,6 +66,10 @@ class ContactTests(unittest.TestCase):
         self.assertEqual(classify("advertising@magazine.example", "Contact")[1], 0)
         self.assertEqual(classify("naam@magazine.example", "Contact voor adverteren")[1], 0)
 
+    def test_placeholder_addresses_are_not_extracted(self):
+        found = self.extract('<p>uwnaam@voorbeeld.nl redactie@krant.nl</p>')
+        self.assertEqual([contact.email for contact in found], ["redactie@krant.nl"])
+
     def test_editorial_topic_and_shared_publisher_matching(self):
         self.assertEqual(editorial_topic("sport@krant.example", "", "algemeen nieuws", "deelredactie"), "sport")
         self.assertEqual(editorial_topic("redactie@haak.example", "", "haken en amigurumi", "redactie"), "haken en amigurumi")
